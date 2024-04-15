@@ -7,5 +7,5 @@ export default defineConfig({
   integrations: [react({
     include: ['**/react/*'],
     experimentalReactChildren: true
-  }), tailwind({ config: './path/to/your/tailwind.config.mjs' })]
+  }), tailwind({ config: './tailwind.config.mjs' })]
 });
