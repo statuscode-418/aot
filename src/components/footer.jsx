@@ -12,8 +12,8 @@ const Footer = () => {
             585-475-2411
           </p>
         </div>
-        <div className="col-span-2 flex justify-between items-center">
-          <nav className="flex space-x-4">
+        <div className="col-span-2 grid grid-cols-2">
+          <nav className="flex space-x-4 w-full justify-start md:justify-center">
             <a href="#" className="text-gray-300 hover:text-white">
               Techfind
             </a>
@@ -24,13 +24,15 @@ const Footer = () => {
               News Bulletin
             </a>
           </nav>
-          <div className="flex space-x-4">
-            <a href="#" className="text-gray-300 hover:text-white">
-              Facebook
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white">
-              Twitter
-            </a>
+          <div className="flex col-span-1">
+            <nav className="flex space-x-4 w-full justify-end">
+              <a href="#" className="text-gray-300 hover:text-white">
+                Facebook
+              </a>
+              <a href="#" className="text-gray-300 hover:text-white">
+                Twitter
+              </a>
+            </nav>
           </div>
         </div>
       </div>

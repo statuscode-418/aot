@@ -30,7 +30,7 @@ const navbar = () => {
 
   return (
     <>
-      <header className="mt-10">
+      <header className="mt-10 bg-white">
         <div className="bg-yellow-500 h-2 w-full"></div>
         <div className="container mx-auto flex justify-between items-center py-4">
           <a href="/" className="flex items-center">
@@ -45,7 +45,7 @@ const navbar = () => {
       </header>
 
       <nav className="bg-yellow-500 border-y border-gray-300">
-        <div className="container mx-auto px-4 py-2 text-[#000080] text-xl">
+        <div className="container mx-auto px-4 py-2 text-[#000080] text-x">
           <ul className="flex justify-between items-center">
             {['academics', 'research', 'students', 'faculty'].map((link, index) => (
               <li key={index}>
