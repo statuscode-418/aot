@@ -1,9 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaBullhorn } from "react-icons/fa";
-
+import '../../public/styles/nav.css'
 const navbar = () => {
   const [isSearching, setIsSearching] = useState(false);
+  const [display,setDisplay]=useState(false);
   const searchInputRef = useRef(null);
+
+  const setAnnouncement=()=>{
+    setDisplay(!display);
+  }
 
   const searchToggle = () => {
     setIsSearching(!isSearching);
@@ -35,7 +40,7 @@ const navbar = () => {
             <h1 className="text-3xl font-bold text-center">ACADEMY OF TECHNOLOGY</h1>
             <p className="text-sm mt-1">...translate your vision into reality</p>
           </div>
-          <FaBullhorn className="text-[#000080]" style={{ fontSize: '4rem' }} />
+          <FaBullhorn className="text-[#000080]" onClick={setAnnouncement} style={{ fontSize: '4rem' }} />
         </div>
       </header>
 
@@ -59,7 +64,7 @@ const navbar = () => {
                     className="px-4 py-2 rounded-l-md border-r-0 border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   />
                   <button
-                    className="bg-yellow-500 text-[#000080] px-4 py-2 rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    className="bg-yellow-500 text-[#000080] px-4 py-2 rounded-r-md hover:bg-[#232c695b] focus:outline-none focus:ring-1 focus:ring-blue-500"
                     onClick={searchToggle}
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -69,7 +74,7 @@ const navbar = () => {
                 </div>
               ) : (
                 <button
-                  className="bg-yellow-500 text-[#000080] px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="bg-yellow-500 text-[#000080] px-4 py-2 rounded-md hover:bg-[#232c695b] focus:outline-none focus:ring-1 focus:ring-blue-500"
                   onClick={searchToggle}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -81,6 +86,46 @@ const navbar = () => {
           </ul>
         </div>
       </nav>
+      
+
+      {/* gallary portion */}
+
+      
+
+      <div className="gallary">
+              <div className="imgSection bg_gallary w-[100vw] h-[100vh] mt-[0px] pt-[50px]">
+              {display && (
+                <div className="announcement border border-[#232C69] pb-[30px] w-[400px] rounded-[20px] bg-[#232C69]  m-auto mr-[11%]">
+                  <div className="heading text-[white] rounded-tl-[20px] rounded-tr-[20px] h-[35px] items-center justify-center">
+                      <h1 className='text-center p-[5px] font-medium'>Announcements</h1>
+                  </div>
+                  <div className="body bg-white pb-[30px] pt-[10px] flex flex-col items-center justify-center gap-2">
+                      <ul>
+                        <li className='text-center p-2 text-[#232C69]'>
+                          <span className="custom-underline">DKM is a good boy but KB is not</span>
+                        </li>
+                        <li className='text-center p-2 text-[#232C69]'>
+                          <span className="custom-underline">DKM is a good boy but KB is not</span>
+                        </li>
+                        <li className='text-center p-2 text-[#232C69]'>
+                          <span className="custom-underline">DKM is a good boy but KB is not</span>
+                        </li>
+                        <li className='text-center p-2 text-[#232C69]'>
+                          <span className="custom-underline">DKM is a good boy but KB is not</span>
+                        </li>
+                      </ul>
+                      <button className='rounded-[25px] bg-[#232C69] p-[10px] text-white'>see more...</button>
+                </div>
+
+                  <div className="foot">
+
+                  </div>
+                </div>
+                )}
+                
+              </div>
+      </div>
+    
     </>
   );
 };
