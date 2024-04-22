@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaBullhorn } from "react-icons/fa";
-import '../../public/styles/nav.css'
-import videoSrc from '../../assets/aotvideo.webm'
+import '../../public/styles/nav.css';
+import videoSrc from '../../assets/aotvideo.webm';
 
 const Navbar = () => {
   const [isSearching, setIsSearching] = useState(false);
@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const setAnnouncement = () => {
     setDisplay(!display);
-  }
+  };
 
   const searchToggle = () => {
     setIsSearching(!isSearching);
@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="mt-10 bg-white">
+      <header className="mt-10 bg-white relative z-10">
         <div className="bg-yellow-500 h-2 w-full"></div>
         <div className="container mx-auto flex justify-between items-center py-4">
           <a href="/" className="flex items-center">
@@ -67,18 +67,60 @@ const Navbar = () => {
                   <button className="rounded-[25px] bg-[#232C69] p-[10px] text-white">see more...</button>
                 </div>
 
-                <div className="foot">
-
-                </div>
+                <div className="foot"></div>
               </div>
             )}
           </div>
         </div>
       </header>
 
-      <div className="relative h-screen">
+      <nav className="bg-yellow-500 border-y border-gray-300">
+        <div className="container mx-auto px-4 py-2 text-[#000080] text-x">
+          <ul className="flex justify-between items-center">
+            {['academics', 'research', 'students', 'faculty'].map((link, index) => (
+              <li key={index}>
+                <a href={`/${link}`} className="font-medium hover:text-gray-200 capitalize">
+                  {link}
+                </a>
+              </li>
+            ))}
+            <li>
+              {isSearching ? (
+                <div className="flex">
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    placeholder="Search"
+                    className="px-4 py-2 rounded-l-md border-r-0 border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  />
+                  <button
+                    className="bg-yellow-500 text-[#000080] px-4 py-2 rounded-r-md hover:bg-[#232c695b] focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    onClick={searchToggle}
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </button>
+                </div>
+              ) : (
+                <button
+                  className="bg-yellow-500 text-[#000080] px-4 py-2 rounded-md hover:bg-[#232c695b] focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  onClick={searchToggle}
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
+              )}
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+     <div className="relative h-screen">
         <video src={videoSrc} autoPlay loop muted className="w-full h-full object-cover absolute inset-0 z-0" />
       </div>
+      
     </>
   );
 };
