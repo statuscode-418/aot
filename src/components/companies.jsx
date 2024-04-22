@@ -5,12 +5,12 @@ import { companies } from '../constants/companies';
 import '../../public/styles/bg_transparent.css'
 const Companies = () => {
   return (
-    <div className="border border-zinc-900 border-t-2 border-b-2 mt-4 mb-4 p-4 w-full">
-      <ul className="flex justify-between items-center ">
+    <div className="border border-zinc-900 border-t-2 border-b-2 mt-4 mb-4 p-4 w-full ">
+      <ul className="flex justify-between items-center anime mix-blend-multiply ">
         {companies.map((company) => (
-          <li key={company.id}>
+          <li key={company.id} >
             <a href={company.href} className="text-xl text-zinc-900 hover:text-zinc-500">
-              <img src={company.img_link} alt="Company" className='blend-multiply'/>
+              <img src={company.img_link} alt="Company" />
             </a>
           </li>
         ))}
