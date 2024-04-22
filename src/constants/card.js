@@ -1,24 +1,24 @@
 export const card = [
   {
-    "image": "https://www.google.com",
+    "image": "https://images.unsplash.com/photo-1713714614660-18a216d92281?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8",
     "title": "Smart India Hackathon",
     "text": "Smart India Hackathon is a nationwide initiative to provide students a platform to solve some of pressing problems we face in our daily lives, and thus inculcate a culture of product innovation and a mindset of problem solving. Academy of Technology proudly hosts the Grand Finale of Smart India Hackathon 2021.",
     "link": "https://www.sih.gov.in/"
   },
   {
-    "image": "https://www.google.com",
+    "image": "https://images.unsplash.com/photo-1709777083341-2ebb9f0772cc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHx8",
     "title": "SCCSBS Inauguration",
     "text": "The inauguration of the Smart Classroom and Cyber Security Bootcamp was held on 29th January, 2021. The event was graced by the presence of the Hon'ble Vice Chancellor of MAKAUT, Prof. (Dr.) Saikat Maitra, and the Hon'ble Principal of Academy of Technology, Prof. (Dr.) Anupam Basu.",
     "link": "https://www.academyoftechnology.org/"
   },
   {
-    "image": "https://www.google.com",
+    "image": "https://images.unsplash.com/photo-1667216324249-c04ad5284ff2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D",
     "title": "IEEE Student Chapter",
     "text": "The IEEE Student Chapter of Academy of Technology is a student-run organization that aims to promote the professional development of students in the field of engineering. The chapter organizes various events, workshops, and seminars throughout the year. Academy of Technology is proud to host the IEEE Student Chapter.",
     "link": "https://www.ieee.org/"
   },
   {
-    "image": "https://www.google.com",
+    "image": "https://images.unsplash.com/photo-1713724311683-73106ad9d510?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D",
     "title": "TCS Campus Placement Drive",
     "text": "The TCS Campus Placement Drive was held on 5th February, 2021. The event was a grand success with over 200 students participating in the drive. Academy of Technology is proud to have TCS as one of its esteemed recruiters.",
     "link": "https://www.tcs.com/"

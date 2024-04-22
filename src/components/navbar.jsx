@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaBullhorn } from "react-icons/fa";
 import '../../public/styles/nav.css';
-import videoSrc from '../../assets/aotvideo.webm';
+import Video from '../components/video.jsx'
 
 const Navbar = () => {
   const [isSearching, setIsSearching] = useState(false);
@@ -116,11 +116,9 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-
-     <div className="relative h-screen">
-        <video src={videoSrc} autoPlay loop muted className="w-full h-full object-cover absolute inset-0 z-0" />
-      </div>
       
+    <Video />
+        
     </>
   );
 };
