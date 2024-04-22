@@ -1,5 +1,5 @@
 import React from 'react'
-import VideoBack from "../../public/assets/aotvideo.mp4"
+import VideoBack from "../assets/aotvideo.webm"
 const video = () => {
   return (
     <div className='w-full h-screen'>
@@ -9,3 +9,4 @@ const video = () => {
 }
 
 export default video
+

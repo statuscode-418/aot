@@ -1,5 +1,5 @@
 .bg_gallary{
-    background-image: url("/assets/aotvideo.gif");
+    background: url("../../assets/aotvideo.webm");
     background-size: cover;
     background-position: center;
 }
