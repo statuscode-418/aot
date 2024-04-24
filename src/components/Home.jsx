@@ -1,12 +1,11 @@
 import React from 'react'
 import Navbar from './navbar.jsx';
-
+import Video from './video.jsx';
 const Home = () => {
   return (
     <div>
       <Navbar />
-      <div className='py-5 '>
-      </div>
+      <Video />
     </div>
   )
 }

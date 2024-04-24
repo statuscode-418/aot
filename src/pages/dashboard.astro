@@ -1,0 +1,26 @@
+---
+import Navbar from '../components/Home.jsx'
+import Footer from '../components/footer.jsx'
+import '../../public/styles/fonts.css'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+</head>
+    <body>
+        <Navbar client:load />
+        <main>
+            <h1>Welcome to Astro</hjson>
+            <p>
+                Astro is a new kind of static site builder that delivers lightning-fast performance with a modern developer experience. Get started by editing this file at <code>src/pages/index.hjson</code>.
+            </p>
+        </main>
+        <Footer />
+
+    </body>
+</html>
