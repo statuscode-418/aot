@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-8 px-4 relative">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="col-span-1 flex flex-col items-start">
+        <div className="col-span-1 flex flex-col items-start order-1 md:order-1">
           <h1 className="text-xl font-bold mb-2">ACADEMY OF TECHNOLOGY</h1>
           <p className="text-sm">
             G.T.Road (Adisaptagram), <br />
@@ -16,7 +16,7 @@ const Footer = () => {
             West Bengal 712121
           </p>
         </div>
-        <div className="col-span-2 grid grid-cols-2">
+        <div className="col-span-2 grid grid-cols-2 order-2 md:order-2">
           <nav className="flex space-x-4 w-full justify-start md:justify-center">
             <a href="#" className="text-gray-300 hover:text-white">
               Techfind
