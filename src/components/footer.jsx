@@ -34,6 +34,8 @@ const Footer = () => {
                 href="https://www.facebook.com/www.aot.edu.in"
                 className="text-gray-300"
                 whileHover={{ scale: 1.2 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaFacebook size={32} />
               </motion.a>
@@ -41,6 +43,8 @@ const Footer = () => {
                 href="https://www.instagram.com/aotconnect/"
                 className="text-gray-300"
                 whileHover={{ scale: 1.2 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaInstagram size={32} />
               </motion.a>
@@ -48,6 +52,8 @@ const Footer = () => {
                 href="https://www.linkedin.com/school/academy-of-technology/"
                 className="text-gray-300"
                 whileHover={{ scale: 1.2 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaLinkedin size={32} />
               </motion.a>
@@ -55,6 +61,8 @@ const Footer = () => {
                 href="#"
                 className="text-gray-300"
                 whileHover={{ scale: 1.2 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaSquareXTwitter size={32} />
               </motion.a>
@@ -67,7 +75,6 @@ const Footer = () => {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.111293948669!2d88.37654!3d22.95300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4de2e7a2a27%3A0x27b4e3a65c28867a!2sAcademy%20of%20Technology!5e0!3m2!1sen!2sin!4v1632734095701!5m2!1sen!2sin"
           width="400"
           height="200"
-          // 22.895599, 88.402496
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
