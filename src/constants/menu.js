@@ -1,50 +1,113 @@
-export const menu = [
+export const Menu = [
   {
-    
-    title: 'academics',
-    subMenu: [
+    label: 'Academics',
+    submenu: [
       {
-        title: 'department',
-        url: '/academics/department',
+        label: 'Department',
+        link: '/academics/departments',
       },
       {
-        title: 'Programs',
-        url: '/academics/programs',
-        subMenu: [
-          {
-            title: 'Under-Graduate', 
-            url: '/academics/programs/undergraduate'
-          },
-          {
-            title: 'Post-Graduate',
-            url: '/academics/programs/post-graduate'
-          },
-          {
-            title: 'Program-Structure',
-            url: '/academics/programs/structure'
-          },
-          {
-            title: 'Cirriculum',
-            url: '/academics/programs/cirriculum',
-          }
-              ] ,    
-          },
+        label: 'UG Programs',
+        link: '/academics/ug-programs',
+      },
       {
-        title: 'Research',
+        label: 'PG Programs',
+        link: '/academics/pg-programs',
+      },
+      {
+        label: 'Program Structure',
+        link: '/academics/program-structure',
+      },
+      {
+        label: 'Regulations',
+        link: '/academics/regulations',
+      },
+      {
+        label: 'Curriculum',
+        link: '/academics/curriculum',
+      },
+      {
+        label: 'Resources',
+        submenu: [
+          {
+            label: 'Library',
+            link: '/resources/library',
+          },
+          {
+            label: 'Moodle',
+            link: '/resources/moodle',
+          },
+        ],
+      },
+      {
+        label: 'Admissions',
+        submenu: [
+          {
+            label: 'UG Admission',
+            link: '/ug-admission',
+          },
+          {
+            label: 'PG Admission',
+            link: '/pg-admission',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Research',
+    submenu: [
+      {
+        label: 'Current Research',
+        link: '/current-research',
+      },
+      {
+        label: 'Past Research',
+        link: '/past-research',
+      },
+      {
+        label: 'Research Facilities',
+        link: '/research-facilities',
+      },
+    ],
+  },
+  {
+    label: 'Students',
+    submenu: [
+      {
+        label: 'Life@AOT',
+        link: '/life-at-aot',
+      },
+      {
+        label: 'Campus Facilities',
+        link: '/campus-facilities',
+      },
+      {
+        label: 'Career Services',
+        link: '/career-services',
+      },
+      {
+        label: 'Events',
+        link: '/events',
+      },
+    ],
+  },
+  {
+    label: 'Faculty',
+    submenu: [
+      {
+        label: 'Faculty List',
+        link: '/faculty-list',
+      },
+      {
+        label: 'Faculty Positions',
+        link: '/faculty-positions',
+      },
+      {
+        label: 'Career Benefits@AOT',
+        link: '/career-benefits',
+      },
+    ],
+  },
+];
 
-      }
-    ]
-  },
-  {
-    title: 'research',
-    url: '/research'
-  },
-  {
-    title: 'students',
-    url: '/students'
-  },
-  {
-    title: 'faculty',
-    url: '/faculty'
-  }
-]
