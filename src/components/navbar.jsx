@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaBullhorn } from "react-icons/fa";
 import '../../public/styles/nav.css';
+import Video from '../components/video.jsx'
 
 const Navbar = () => {
   const [isSearching, setIsSearching] = useState(false);
@@ -85,7 +86,7 @@ const Navbar = () => {
             ))}
             <li>
               {isSearching ? (
-                <div className="flex ">
+                <div className="flex">
                   <input
                     ref={searchInputRef}
                     type="text"
@@ -115,6 +116,8 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
+
+
     </>
   );
 };
