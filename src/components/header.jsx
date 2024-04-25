@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaBullhorn } from 'react-icons/fa';
+import '../../public/styles/nav.css'
 
 const Header = () => {
   const [displayAnnouncement, setDisplayAnnouncement] = useState(false);
@@ -43,7 +44,7 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="absolute top-full right-4 mt-2 w-[400px] border border-[#232C69] rounded-[20px] bg-[#232C69] z-[999]"
+              className="absolute top-full right-4 mt-4 pb-[30px] w-[400px] border border-[#232C69] rounded-[20px] bg-[#232C69] z-[999]"
             >
               <div className="heading text-white rounded-tl-[20px] rounded-tr-[20px] h-[35px] items-center justify-center">
                 <h1 className="text-center p-[5px] font-medium">Announcements</h1>
