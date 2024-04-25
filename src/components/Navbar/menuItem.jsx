@@ -8,9 +8,6 @@ const MenuItem = ({ item }) => {
     setIsHovered(!isHovered);
   };
 
-  // Check if the item's submenu contains "Resources"
-  const hasResources = item.submenu && item.submenu.some(subItem => subItem.label === "Resources");
-
   return (
     <li>
       <button
@@ -37,37 +34,31 @@ const MenuItem = ({ item }) => {
                 >
                   {subItem.label}
                 </a>
-                {hasResources && item.label === "Admission" && subItem.label === "Resources" && (
-                  <motion.div
-                    initial={{ opacity: 0, x: 10, y: -10 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    exit={{ opacity: 0, x: 10, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute left-full top-0 mt-0 w-[200px] bg-yellow-500 shadow-md rounded-md p-2 z-10"
-                    style={{ border: '1px solid #fff', marginLeft: '200px' }}
-                  >
-                    <div className="py-1">
-                      <a
-                        href="#"
-                        className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
-                        style={{ textDecoration: 'underline' }}
-                      >
-                        Library
-                      </a>
-                    </div>
-                    <div className="py-1">
-                      <a
-                        href="#"
-                        className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
-                        style={{ textDecoration: 'underline' }}
-                      >
-                        Moodle
-                      </a>
-                    </div>
-                  </motion.div>
-                )}
               </div>
             ))}
+            {/* Hardcoded sub-menus for Resources and Admissions */}
+            {item.label === "Resources" && (
+              <div className="py-1">
+                <a
+                  href="#"
+                  className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+                  style={{ textDecoration: 'underline' }}
+                >
+                  Library
+                </a>
+              </div>
+            )}
+            {item.label === "Admissions" && (
+              <div className="py-1">
+                <a
+                  href="#"
+                  className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+                  style={{ textDecoration: 'underline' }}
+                >
+                  UG Admission
+                </a>
+              </div>
+            )}
           </motion.div>
         )}
       </button>

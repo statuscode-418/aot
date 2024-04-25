@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import MenuItem from './menuItem'; // Importing the MenuItem component
 import { Menu } from '../../constants/menu';
-
 const Navbar = () => {
   const [isSearching, setIsSearching] = useState(false);
 
