@@ -1,13 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaBullhorn } from 'react-icons/fa';
 
 const Header = () => {
   const [displayAnnouncement, setDisplayAnnouncement] = useState(false);
+  const announcementRef = useRef(null);
 
   const toggleAnnouncement = () => {
     setDisplayAnnouncement(!displayAnnouncement);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (announcementRef.current && !announcementRef.current.contains(event.target)) {
+        setDisplayAnnouncement(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="mt-10 bg-white relative z-10">
@@ -24,6 +38,7 @@ const Header = () => {
           <FaBullhorn className="text-[#000080]" onClick={toggleAnnouncement} style={{ fontSize: '3rem' }} />
           {displayAnnouncement && (
             <motion.div
+            ref={announcementRef}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
