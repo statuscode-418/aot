@@ -26,39 +26,53 @@ const MenuItem = ({ item }) => {
             style={{ border: '1px solid #fff' }}
           >
             {item.submenu.map((subItem, index) => (
+              <MenuItem key={index} item={subItem} />
+            ))}
+          </motion.div>
+        )}
+        {/* Render subSubmenu for Resources and Admissions */}
+        {item.label === "Resources" && isHovered && (
+          <motion.div
+            initial={{ opacity: 0, x: 10, y: -10 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            exit={{ opacity: 0, x: 10, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="absolute left-full top-0 mt-1 w-[200px] bg-yellow-500 shadow-md rounded-md p-2 z-10"
+            style={{ border: '1px solid #fff' }}
+          >
+            {item.subSubmenu.map((subSubItem, index) => (
               <div key={index} className="py-1">
                 <a
-                  href={subItem.link}
+                  href={subSubItem.link}
                   className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
                   style={{ textDecoration: 'underline' }}
                 >
-                  {subItem.label}
+                  {subSubItem.label}
                 </a>
               </div>
             ))}
-            {/* Hardcoded sub-menus for Resources and Admissions */}
-            {item.label === "Resources" && (
-              <div className="py-1">
+          </motion.div>
+        )}
+        {item.label === "Admissions" && isHovered && (
+          <motion.div
+            initial={{ opacity: 0, x: 10, y: -10 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            exit={{ opacity: 0, x: 10, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="absolute left-full top-0 mt-1 w-[200px] bg-yellow-500 shadow-md rounded-md p-2 z-10"
+            style={{ border: '1px solid #fff' }}
+          >
+            {item.subSubmenu.map((subSubItem, index) => (
+              <div key={index} className="py-1">
                 <a
-                  href="#"
+                  href={subSubItem.link}
                   className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
                   style={{ textDecoration: 'underline' }}
                 >
-                  Library
+                  {subSubItem.label}
                 </a>
               </div>
-            )}
-            {item.label === "Admissions" && (
-              <div className="py-1">
-                <a
-                  href="#"
-                  className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
-                  style={{ textDecoration: 'underline' }}
-                >
-                  UG Admission
-                </a>
-              </div>
-            )}
+            ))}
           </motion.div>
         )}
       </button>

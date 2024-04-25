@@ -28,7 +28,7 @@ export const Menu = [
       },
       {
         label: 'Resources',
-        submenu: [
+        subSubmenu: [
           {
             label: 'Library',
             link: '/resources/library',
@@ -41,7 +41,7 @@ export const Menu = [
       },
       {
         label: 'Admissions',
-        submenu: [
+        subSubmenu: [
           {
             label: 'UG Admission',
             link: '/ug-admission',
