@@ -15,7 +15,7 @@ export default {
       },
       animation: {
         marquee: 'marquee 5s linear infinite',
-        move: 'move 30s linear infinite', 
+        move: 'move 30s linear infinite',
       },
       colors: {
         'aot-indigo': '#0F2167',
@@ -26,6 +26,21 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.scrollbar-hide': {
+          /* Modern browsers */
+          'scrollbar-width': 'none',
+          /* IE and Edge */
+          '-ms-overflow-style': 'none',
+        },
+        '.scrollbar-hide::-webkit-scrollbar': {
+          display: 'none',
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 };
 
