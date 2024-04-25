@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaBullhorn } from 'react-icons/fa'; // Import FaBullhorn icon
+import { FaBullhorn } from 'react-icons/fa';
 import { Menu } from '../constants/menu';
 
 const Navbar = () => {
@@ -15,12 +15,21 @@ const Navbar = () => {
     setIsSearching(!isSearching);
   };
 
+  const renderMenuItems = (items) => {
+    return items.map((item, index) => (
+      <MenuItem key={index} item={item} />
+    ));
+  };
+
   const MenuItem = ({ item }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleHover = () => {
       setIsHovered(!isHovered);
     };
+
+    // Check if the item's submenu contains "Resources"
+    const hasResources = item.submenu && item.submenu.some(subItem => subItem.label === "Resources");
 
     return (
       <li>
@@ -32,11 +41,11 @@ const Navbar = () => {
           {item.label}
           {item.submenu && isHovered && (
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, x: 10, y: -10 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              exit={{ opacity: 0, x: 10, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="absolute left-0 top-full mt-1 w-[200px] bg-yellow-500 shadow-md rounded-md p-2 z-10"
+              className="absolute left-full top-0 mt-1 w-[200px] bg-yellow-500 shadow-md rounded-md p-2 z-10"
               style={{ border: '1px solid #fff' }}
             >
               {item.submenu.map((subItem, index) => (
@@ -48,8 +57,35 @@ const Navbar = () => {
                   >
                     {subItem.label}
                   </a>
-                  {subItem.submenu && subItem.submenu.length > 0 && ( // Check if submenu exists and has items
-                    <MenuItem key={subItem.label} item={subItem} /> // Render MenuItem recursively
+                  {/* Render multi-level submenu for "Admission" item */}
+                  {item.label === "Admission" && subItem.label === "Resources" && (
+                    <motion.div
+                      initial={{ opacity: 0, x: 10, y: -10 }}
+                      animate={{ opacity: 1, x: 0, y: 0 }}
+                      exit={{ opacity: 0, x: 10, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute left-full top-0 mt-0 w-[200px] bg-yellow-500 shadow-md rounded-md p-2 z-10"
+                      style={{ border: '1px solid #fff', marginLeft: '200px' }}
+                    >
+                      <div className="py-1">
+                        <a
+                          href="#"
+                          className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+                          style={{ textDecoration: 'underline' }}
+                        >
+                          Library
+                        </a>
+                      </div>
+                      <div className="py-1">
+                        <a
+                          href="#"
+                          className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+                          style={{ textDecoration: 'underline' }}
+                        >
+                          Moodle
+                        </a>
+                      </div>
+                    </motion.div>
                   )}
                 </div>
               ))}
@@ -60,20 +96,13 @@ const Navbar = () => {
     );
   };
 
-  const renderMenuItems = (items) => {
-    return items.map((item, index) => (
-      <MenuItem key={item.label} item={item} />
-    ));
-  };
-
   return (
     <>
-      {/* Header */}
       <header className="mt-10 bg-white relative z-10">
         <div className="bg-yellow-500 h-2 w-full"></div>
         <div className="container mx-auto flex justify-between items-center py-4">
           <a href="/" className="flex items-center">
-            <img src="/aot-logo.jpg" alt="Academy of Technology" className="h-15 mr-2" /> {/* Adjust image path */}
+            <img src="/aot-logo.jpg" alt="Academy of Technology" className="h-15 mr-2" />
           </a>
           <div className="flex-grow flex flex-col items-center">
             <h1 className="text-3xl font-bold text-center">ACADEMY OF TECHNOLOGY</h1>
@@ -82,7 +111,13 @@ const Navbar = () => {
           <div className="relative">
             <FaBullhorn className="text-[#000080]" onClick={toggleAnnouncement} style={{ fontSize: '4rem' }} />
             {displayAnnouncement && (
-              <div className="absolute top-full right-4 mt-2 w-[400px] border border-[#232C69] rounded-[20px] bg-[#232C69] z-[999]">
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+                className="absolute top-full right-4 mt-2 w-[400px] border border-[#232C69] rounded-[20px] bg-[#232C69] z-[999]"
+              >
                 <div className="heading text-white rounded-tl-[20px] rounded-tr-[20px] h-[35px] items-center justify-center">
                   <h1 className="text-center p-[5px] font-medium">Announcements</h1>
                 </div>
@@ -103,13 +138,12 @@ const Navbar = () => {
                   </ul>
                   <button className="rounded-[25px] bg-[#232C69] p-[10px] text-white">see more...</button>
                 </div>
-              </div>
+              </motion.div>
             )}
           </div>
         </div>
       </header>
 
-      {/* Navbar */}
       <nav className="bg-yellow-500 border-y border-gray-300">
         <div className="container mx-auto px-4 py-2 text-[#000080] text-x">
           <ul className="flex justify-between items-center">
