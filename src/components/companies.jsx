@@ -2,6 +2,7 @@ import React from 'react';
 import '../../public/styles/animations.css'
 import { companies } from '../constants/companies';
 import '../../public/styles/bg_transparent.css'
+import { motion } from 'framer-motion';
 
 const Companies = () => {
   return (
@@ -11,11 +12,15 @@ const Companies = () => {
           {companies.map((company, index) => (
             <li key={index} className="mr4 sm:mr-4 lg:mr-0">
               <a href={company.href} target="_blank" rel="noopener noreferrer" className="text-xl text-zinc-900 hover:text-zinc-500">
-                <img src={company.img_source} alt="Company" />
+                <motion.img 
+                  src={company.img_source} 
+                  alt="Company" 
+                  whileHover={{ scale: 1.1 }} 
+                  transition={{ duration: 0.5 }}
+                />
               </a>
             </li>
           ))}
-          {/* Duplicate the logos */}
           {companies.map((company, index) => (
             <li key={index + companies.length} className="mr4 sm:mr-4 lg:mr-0">
               <a href={company.href} target="_blank" rel="noopener noreferrer" className="text-xl text-zinc-900 hover:text-zinc-500">
