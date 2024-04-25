@@ -9,3 +9,32 @@
     transform: translateX(-100%);
   }
 }
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-content img {
+  width: 130px;
+  height: auto;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
