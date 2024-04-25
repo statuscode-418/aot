@@ -1,17 +1,17 @@
 ---
-import '../../public/styles/main.css'
-import '../../public/styles/fonts.css'
-import Navbar from '../components/navbar.jsx'
-import Home from '../components/Home.jsx'
-import Footer from '../components/footer.jsx'
-import Movement from '../components/movement.jsx'
-import Companies from '../components/companies.jsx'
-import AboutCollege from '../components/aboutcollege.jsx'
-import News_bul from '../components/News_bul.jsx'
-import Video from '../components/video.jsx'
-import CardWrapper from '../components/Cardwrapper.jsx'
+import "../../public/styles/main.css";
+import "../../public/styles/fonts.css";
+import Navbar from "../components/navbar.jsx";
+import Home from "../components/Home.jsx";
+import Footer from "../components/footer.jsx";
+import Movement from "../components/movement.jsx";
+import Companies from "../components/companies.jsx";
+import AboutCollege from "../components/aboutcollege.jsx";
+import News_bul from "../components/News_bul.jsx";
+import Video from "../components/video.jsx";
+import CardWrapper from "../components/Cardwrapper.jsx";
+import AboutCollegeV2 from "../components/aboutCollegeV2.astro";
 ---
-
 
 <html lang="en">
 	<head>
@@ -22,14 +22,13 @@ import CardWrapper from '../components/Cardwrapper.jsx'
 		<title>Astro</title>
 	</head>
 	<body class="bg-aot-bone">
-	<Home client:load />
-  <!-- <Video client:load /> -->
-  <Movement client:load />
-  <!--CardWrapper client:load -->
-  <AboutCollege client:load />
-  <News_bul client:load />
-  <Companies client:load />
-  <Footer client:load />
-  
+		<Home client:load />
+		<!-- <Video client:load /> -->
+		<Movement client:load />
+		<!--CardWrapper client:load -->
+		<AboutCollegeV2></AboutCollegeV2>
+		<News_bul client:load />
+		<Companies client:load />
+		<Footer client:load />
 	</body>
 </html>
