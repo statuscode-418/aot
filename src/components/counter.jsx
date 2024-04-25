@@ -1,9 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../../public/styles/animations.css';
 import '../../public/styles/bg_transparent.css';
 
 const Counter = () => {
+    const counterRef = useRef(null);
+
     useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        if (counterRef.current) {
+            observer.observe(counterRef.current);
+        }
+
+        return () => {
+            if (counterRef.current) {
+                observer.unobserve(counterRef.current);
+            }
+        };
+    }, []);
+
+    const startCounter = () => {
         const counter = (element, options) => {
             const settings = {
                 start: 0,
@@ -47,10 +70,10 @@ const Counter = () => {
         counter('#counter1', { end: 69, duration: 3000, suffix: ' PROFESSIONAL TEACHERS' });
         counter('#counter2', { end: 3918, duration: 3000, suffix: ' REGISTERED STUDENTS' });
         counter('#counter3', { end: 15198, duration: 3000, suffix: ' ESTABLISHED ALUMNI' });
-    }, []);
+    };
 
     return (
-    <div className="relative">
+    <div className="relative" ref={counterRef}>
         <img className='w-full h-[600px]' src="../assets/aot3.png" alt="Academy of Technology" />
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="absolute top-1/2 left-1/2 sm:top-1/2 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-8">
