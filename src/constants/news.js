@@ -1,9 +1,51 @@
-export const News = [
-    {
-      "image": "https://images.unsplash.com/photo-1713714614660-18a216d92281?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8",
-      "title": "Smart India Hackathon",
-      "text": "Smart India Hackathon is a nationwide initiative to provide students a platform to solve some of pressing problems we face in our daily lives, and thus inculcate a culture of product innovation and a mindset of problem solving. Academy of Technology proudly hosts the Grand Finale of Smart India Hackathon 2021.",
-      "link": "https://www.sih.gov.in/"
-    },
-  ]
+export const news=[
+  {
+      id:1,
+      Title:"Techfiesta 2k24",
+      Author:"Dilip Kumar Maity",
+      img:"https://www.mywbut.com/logo_pic/65ae1b28e983c01c875bb596dbd81547.jpg",
+      details:"All open forth gathering called midst, fill have was greater bearing heaven it isn't god shall you're in divide make. Let that waters moved i cattle have kind place make were every own dominion you'll two creature life night his fish signs two. From and, evening had all midst all. Nabajit Kaushik Rohan Anjishnu Ritam all are pro coders, rest all of them are trash. We are sigma pro coders we will defeat them all.",
+      link:"ja khusi bosia dibi"
+  },
+  {
+      id:2,
+      Title:"Techfiesta 2k24",
+      Author:"Dilip Kumar Maity",
+      img:"https://www.mywbut.com/logo_pic/65ae1b28e983c01c875bb596dbd81547.jpg",
+      details:"All open forth gathering called midst, fill have was greater bearing heaven it isn't god shall you're in divide make. Let that waters moved i cattle have kind place make were every own dominion you'll two creature life night his fish signs two. From and, evening had all midst all. Nabajit Kaushik Rohan Anjishnu Ritam all are pro coders, rest all of them are trash. We are sigma pro coders we will defeat them all.",
+      link:"ja khusi bosia dibi"
+  },
+  {
+      id:3,
+      Title:"Techfiesta 2k24",
+      Author:"Dilip Kumar Maity",
+      img:"https://www.mywbut.com/logo_pic/65ae1b28e983c01c875bb596dbd81547.jpg",
+      details:"All open forth gathering called midst, fill have was greater bearing heaven it isn't god shall you're in divide make. Let that waters moved i cattle have kind place make were every own dominion you'll two creature life night his fish signs two. From and, evening had all midst all. Nabajit Kaushik Rohan Anjishnu Ritam all are pro coders, rest all of them are trash. We are sigma pro coders we will defeat them all.",
+      link:"ja khusi bosia dibi"
+  },
+  {
+      id:4,
+      Title:"Techfiesta 2k24",
+      Author:"Dilip Kumar Maity",
+      img:"https://www.mywbut.com/logo_pic/65ae1b28e983c01c875bb596dbd81547.jpg",
+      details:"All open forth gathering called midst, fill have was greater bearing heaven it isn't god shall you're in divide make. Let that waters moved i cattle have kind place make were every own dominion you'll two creature life night his fish signs two. From and, evening had all midst all. Nabajit Kaushik Rohan Anjishnu Ritam all are pro coders, rest all of them are trash. We are sigma pro coders we will defeat them all.",
+      link:"ja khusi bosia dibi"
+  },
+  {
+      id:5,
+      Title:"Techfiesta 2k24",
+      Author:"Dilip Kumar Maity",
+      img:"https://www.mywbut.com/logo_pic/65ae1b28e983c01c875bb596dbd81547.jpg",
+      details:"All open forth gathering called midst, fill have was greater bearing heaven it isn't god shall you're in divide make. Let that waters moved i cattle have kind place make were every own dominion you'll two creature life night his fish signs two. From and, evening had all midst all. Nabajit Kaushik Rohan Anjishnu Ritam all are pro coders, rest all of them are trash. We are sigma pro coders we will defeat them all.",
+      link:"ja khusi bosia dibi"
+  },
+  {
+      id:6,
+      Title:"Techfiesta 2k24",
+      Author:"Dilip Kumar Maity",
+      img:"https://www.mywbut.com/logo_pic/65ae1b28e983c01c875bb596dbd81547.jpg",
+      details:"All open forth gathering called midst, fill have was greater bearing heaven it isn't god shall you're in divide make. Let that waters moved i cattle have kind place make were every own dominion you'll two creature life night his fish signs two. From and, evening had all midst all. Nabajit Kaushik Rohan Anjishnu Ritam all are pro coders, rest all of them are trash. We are sigma pro coders we will defeat them all.",
+      link:"ja khusi bosia dibi"
+  }
   
+]
