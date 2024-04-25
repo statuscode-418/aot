@@ -44,27 +44,27 @@ const Counter = () => {
             requestAnimationFrame(animateCounter);
         };
 
-        counter('#counter1', { end: 69, duration: 5000, suffix: ' Professional Teachers' });
-        counter('#counter2', { end: 3918, duration: 5000, suffix: ' Registered Students' });
-        counter('#counter3', { end: 15198, duration: 5000, suffix: ' Established Alumni' });
+        counter('#counter1', { end: 69, duration: 3000, suffix: ' Professional Teachers' });
+        counter('#counter2', { end: 3918, duration: 3000, suffix: ' Registered Students' });
+        counter('#counter3', { end: 15198, duration: 3000, suffix: ' Established Alumni' });
     }, []);
 
     return (
-        <div className="relative">
-            <img className='w-full h-[600px]' src="../assets/aot3.png" alt="Academy of Technology" />
-            <div className="absolute inset-0 bg-black opacity-40"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center space-x-20">
-                <div className="text-white">
-                    <span id="counter1" className="text-6xl font-bold"></span>
-                </div>
-                <div className="text-white">
-                    <span id="counter2" className="text-6xl font-bold"></span>
-                </div>
-                <div className="text-white">
-                    <span id="counter3" className="text-6xl font-bold"></span>
-                </div>
+    <div className="relative">
+        <img className='w-full h-[600px]' src="../assets/aot3.png" alt="Academy of Technology" />
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="absolute top-1/2 left-1/2 sm:top-1/2 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-8">
+            <div className="text-white">
+                <span id="counter1" className="text-6xl font-bold"></span>
+            </div>
+            <div className="text-white">
+                <span id="counter2" className="text-6xl font-bold"></span>
+            </div>
+            <div className="text-white">
+                <span id="counter3" className="text-6xl font-bold"></span>
             </div>
         </div>
+    </div>
     );
 }
 
