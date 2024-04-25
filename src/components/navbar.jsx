@@ -80,7 +80,7 @@ const Navbar = () => {
             <p className="text-sm mt-1">...translate your vision into reality</p>
           </div>
           <div className="relative">
-            <FaBullhorn className="text-[#000080]" onClick={toggleAnnouncement} style={{ fontSize: '4rem' }} />
+            <FaBullhorn className="text-[#000080]" onClick={toggleAnnouncement} style={{ fontSize: '3rem' }} />
             {displayAnnouncement && (
               <div className="absolute top-full right-4 mt-2 w-[400px] border border-[#232C69] rounded-[20px] bg-[#232C69] z-[999]">
                 <div className="heading text-white rounded-tl-[20px] rounded-tr-[20px] h-[35px] items-center justify-center">
@@ -101,7 +101,7 @@ const Navbar = () => {
                       <span className="custom-underline">DKM is a good boy but KB is not</span>
                     </li>
                   </ul>
-                  <button className="rounded-[25px] bg-[#232C69] p-[10px] text-white">see more...</button>
+                  <button className="rounded-[15px] bg-[#232C69] p-[10px] text-white"> see more...</button>
                 </div>
               </div>
             )}

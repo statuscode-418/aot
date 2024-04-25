@@ -12,8 +12,8 @@ const AboutCollege = () => {
                         Nabajit Kaushik Rohan Anjishnu all are pro coders, rest all of them are trash. We are sigma pro coders we will defeat them all.
                     </p>
                 </div>
-                <div className="w-1/2 flex justify-center items-center">
-                    <img src="../assets/aot1.png" alt="AOT" style={{ border: '5px solid #F2ebe3', borderRadius: '25px' }} />
+                <div className="md:w-1/2 flex justify-center items-center mt-6 md:mt-0">
+                    <img src="../assets/aot1.png" alt="AOT" className="border-4 border-white rounded-3xl" />
                 </div>
             </div>
         </div>
