@@ -9,4 +9,8 @@ export const companies = [
     { "img_source": "../assets/infosis.png", "href": "https://www.infosys.com/" },
     { "img_source": "../assets/kpit.png", "href": "https://www.kpit.com/" },
     { "img_source": "../assets/techmahindra.png", "href": "https://www.techmahindra.com/en-in/?f=3640242596" },
+    { "img_source": "../assets/Accenture.png", "href": "https://www.accenture.com" },
+    { "img_source": "../assets/godrej.png", "href": "https://www.godrej.com" },
+    { "img_source": "../assets/persistent.png", "href": "https://www.persistent.com" },
+    { "img_source": "../assets/trianz.png", "href": "https://www.trianz.com" },
 ]
