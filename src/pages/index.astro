@@ -5,13 +5,13 @@ import Home from "../components/Home.jsx";
 import Footer from "../components/footer.jsx";
 import Movement from "../components/movement.jsx";
 import Companies from "../components/companies.jsx";
-// import AboutCollege from "../components/aboutcollege.jsx";
 import News_bul from "../components/News_bul.jsx";
 import Video from "../components/video.jsx";
 import CardWrapper from "../components/Cardwrapper.jsx";
 import AboutCollegeV2 from "../components/aboutCollegeV2.astro";
 import Header from "../components/header.jsx"
 import Navbar from "../components/Navbar/navbar.jsx"
+import Counter from "../components/counter";
 ---
 
 <html lang="en">
@@ -28,8 +28,9 @@ import Navbar from "../components/Navbar/navbar.jsx"
 		 <Video client:load /> 
 		<Movement client:load />
 		<!--CardWrapper client:load -->
-		<News_bul client:load />
 		<AboutCollegeV2></AboutCollegeV2>
+		<News_bul client:load />
+		<Counter client:load />
 		<Companies client:load />
 		<Footer client:load />
 	</body>
