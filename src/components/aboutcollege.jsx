@@ -8,7 +8,7 @@ const AboutCollege = () => {
             <div className="flex w-full mt-32">
                 <div className="w-1/2 flex justify-center items-center backdrop-blur-md bg-black bg-opacity-30 p-6 ml-28" style={{borderRadius: '25px'}}>
                     <p className="text-4xl text-center text-white">All open forth gathering called midst, fill have was greater bearing heaven it isn't god shall you're in divide make. Let that waters moved i cattle have kind place make were every own dominion you'll two creature life night his fish signs two. From and, evening had all midst all.
-                        Nabajit Kaushik Rohan Anjishnu Ritam all are pro coders, rest all of them are trash. We are sigma pro coders we will defeat them all.
+                        Nabajit Kaushik Rohan Anjishnu all are pro coders, rest all of them are trash. We are sigma pro coders we will defeat them all.
                     </p>
                 </div>
                 <div className="w-1/2 flex justify-center items-center">
