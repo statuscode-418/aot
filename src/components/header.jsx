@@ -21,7 +21,7 @@ const Header = () => {
           <p className="text-sm mt-1">...translate your vision into reality</p>
         </div>
         <div className="relative">
-          <FaBullhorn className="text-[#000080]" onClick={toggleAnnouncement} style={{ fontSize: '4rem' }} />
+          <FaBullhorn className="text-[#000080]" onClick={toggleAnnouncement} style={{ fontSize: '3rem' }} />
           {displayAnnouncement && (
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -48,7 +48,7 @@ const Header = () => {
                     <span className="custom-underline">DKM is a good boy but KB is not</span>
                   </li>
                 </ul>
-                <button className="rounded-[25px] bg-[#232C69] p-[10px] text-white">see more...</button>
+                <button className="rounded-[15px] bg-[#232C69] p-[10px] text-white">see more...</button>
               </div>
             </motion.div>
           )}

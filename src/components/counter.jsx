@@ -44,9 +44,9 @@ const Counter = () => {
             requestAnimationFrame(animateCounter);
         };
 
-        counter('#counter1', { end: 69, duration: 3000, suffix: ' Professional Teachers' });
-        counter('#counter2', { end: 3918, duration: 3000, suffix: ' Registered Students' });
-        counter('#counter3', { end: 15198, duration: 3000, suffix: ' Established Alumni' });
+        counter('#counter1', { end: 69, duration: 3000, suffix: ' PROFESSIONAL TEACHERS' });
+        counter('#counter2', { end: 3918, duration: 3000, suffix: ' REGISTERED STUDENTS' });
+        counter('#counter3', { end: 15198, duration: 3000, suffix: ' ESTABLISHED ALUMNI' });
     }, []);
 
     return (
