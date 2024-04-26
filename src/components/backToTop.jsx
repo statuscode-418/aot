@@ -31,20 +31,19 @@ function BackToTopButton() {
         <button ref={buttonRef} onClick={scrollToTop} style={{
             position: 'fixed',
             bottom: '20px',
-            left: '50%',
+            right: '20px',
             transform: 'translateX(-50%)',
-            backdropFilter: 'blur(10px)',
+            backdropFilter: 'blur(5px)',
             color: 'black',
             border: 'none',
             cursor: 'pointer',
-            padding: '5px 15px', 
-            borderRadius: '50px',
-            fontSize: '18px',
+            borderRadius: '50%',
             display:'flex',
             alignItems: 'center',
-            width: '200px',
+            width: '50x',
+            height: '50px',
             justifyContent: 'center'
-        }}><FaArrowUp />Back to top </button>
+        }}><FaArrowUp size={24} /></button>
     );
 }
 
