@@ -1,0 +1,13 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+

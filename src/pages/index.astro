@@ -13,6 +13,7 @@ import Navbar from "../components/Navbar/navbar.jsx";
 import Counter from "../components/counter";
 import { EventComponent } from "../components/events/eventComponent";
 import BackToTopButton from "../components/backToTop";
+import '../../public/styles/scroll.css'
 ---
 
 <html lang="en">
@@ -24,7 +25,7 @@ import BackToTopButton from "../components/backToTop";
 		<meta name="description" content="Academy of Technology"/>
 		<title>Academy Of Technology</title>
 	</head>
-	<body class="bg-aot-bone">
+	<body class="bg-aot-bone overflow-x-hidden scrollbar-hide">
 		<Header client:load />
 		<Navbar client:load />
 		<Video />
