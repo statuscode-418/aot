@@ -1,6 +1,5 @@
-// HamburgerMenu.js
 import React, { useState } from 'react';
-import MenuItem from './menuItem'; // Importing the MenuItem component
+import MenuItem from './menuItem'; 
 import { Menu } from '../../constants/menu';
 
 const HamburgerMenu = () => {
