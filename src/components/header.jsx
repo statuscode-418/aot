@@ -29,7 +29,7 @@ const Header = () => {
       <div className="bg-yellow-500 h-2 w-full"></div>
       <div className="container mx-auto flex justify-between items-center py-4">
         <a href="/" className="flex items-center">
-          <img src="/aot-logo.jpg" alt="Academy of Technology" className="h-15 mr-2" />
+          <img src="../assets/aot-logo.jpg" alt="Academy of Technology" className="h-15 mr-2" />
         </a>
         <div className="flex-grow flex flex-col items-center">
           <h1 className="text-3xl font-bold text-center">ACADEMY OF TECHNOLOGY</h1>

@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white py-8 px-4 relative">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="col-span-1 flex flex-col items-start order-1 md:order-1">
-        <img src="/aot-logo.jpg" alt="AOT Logo" className="h-15 w-auto mr-2" /><br></br>
+        <img src="../assets/aot-logo.jpg" alt="AOT Logo" className="h-15 w-auto mr-2" /><br></br>
           <h1 className="text-2xl mb-2">ACADEMY OF TECHNOLOGY</h1>
           <p className="text-lg">
             G.T.Road (Adisaptagram), <br />
@@ -39,6 +39,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.2 }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
                 <FaFacebook size={32} />
               </motion.a>
@@ -48,6 +49,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.2 }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
                 <FaInstagram size={32} />
               </motion.a>
@@ -57,6 +59,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.2 }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label='LinkedIn'
               >
                 <FaLinkedin size={32} />
               </motion.a>
@@ -66,6 +69,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.2 }}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label='YouTube'
               >
                 <FaYoutube size={32} />
               </motion.a>
@@ -82,6 +86,7 @@ const Footer = () => {
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
+          title="Location Map"
         ></iframe>
       </div>
       <div className="mt-8 flex flex-col items-center text-center text-sm">

@@ -52,6 +52,7 @@ const Navbar = () => {
                 <button
                   className="bg-yellow-500 text-[#000080] px-4 py-2 rounded-r-md hover:bg-[#232c695b] focus:outline-none focus:ring-1 focus:ring-blue-500"
                   onClick={toggleSearch}
+                  aria-label='Toggle Search'
                 >
                   <svg
                     className="w-6 h-6"
@@ -68,6 +69,7 @@ const Navbar = () => {
               <button
                 className="bg-yellow-500 text-[#000080] px-4 py-2 rounded-md hover:bg-[#232c695b] focus:outline-none focus:ring-1 focus:ring-blue-500"
                 onClick={toggleSearch}
+                aria-label= "Search"
               >
                 <svg
                   className="w-6 h-6"
