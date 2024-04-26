@@ -4,7 +4,7 @@
 
 /* Hide scrollbar for the entire page */
 body {
-
+  overflow-y: scroll; /* Always show vertical scrollbar */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer and Edge */
 }
