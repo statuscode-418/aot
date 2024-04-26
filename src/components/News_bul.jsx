@@ -33,7 +33,7 @@ const News_bul = () => {
 
   return (
     <div className='p-8'>
-      <div className="text-[35px] font-bold text-black p-4">News Buletin :</div>
+      <div className="text-[35px] font-bold text-black p-4">News Bulletin :</div>
       <div className="hidden lg:block lgveiw">
       <div className="all_news_container flex  flexwrap gap-6 items-center justify-center ">
       <Swiper
@@ -55,7 +55,7 @@ const News_bul = () => {
               </div>
               <div className="names text-[25px] pt-4 flex items-center justify-center flex-col">
                 {card.details}
-                <a href={card.link}>...see more </a>
+                <a href={card.link}>Read more...</a>
               </div>
             </div>
           </SwiperSlide>
@@ -92,7 +92,7 @@ const News_bul = () => {
               </div>
               <div className="names text-[25px] pt-4 flex items-center justify-center flex-col">
                 {card.details}
-                <a href={card.link}>...see more </a>
+                <a href={card.link}>Read more...</a>
               </div>
             </div>
           </SwiperSlide>

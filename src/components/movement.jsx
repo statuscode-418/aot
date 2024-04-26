@@ -9,7 +9,7 @@ const Movement = () => {
         <div className="marquee-content">
           {links.map((link) => (
             <a key={link.title} href={link.href} className="text-xl text-zinc-900 hover:text-zinc-500">
-              {link.title} <span>--:--</span> 
+              {link.title} <span>  --:--</span> 
             </a>
           ))}
         </div>

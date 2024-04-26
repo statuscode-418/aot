@@ -13,7 +13,7 @@ const MenuItem = ({ item }) => {
       <button
         onMouseEnter={handleHover}
         onMouseLeave={handleHover}
-        className="cursor-pointer hover:bg-gray-200 focus:outline-none px-4 py-2 rounded-md relative"
+        className="cursor-pointer font-bold uppercase hover:bg-gray-200 focus:outline-none px-4 py-2 rounded-md relative"
       >
         {item.label}
         {item.submenu && isHovered && (
@@ -45,7 +45,7 @@ const MenuItem = ({ item }) => {
                 <a
                   href={subSubItem.link}
                   className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
-                  style={{ textDecoration: 'underline' }}
+                  //style={{ textDecoration: 'underline' }}
                 >
                   {subSubItem.label}
                 </a>
@@ -67,7 +67,7 @@ const MenuItem = ({ item }) => {
                 <a
                   href={subSubItem.link}
                   className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
-                  style={{ textDecoration: 'underline' }}
+                  //style={{ textDecoration: 'underline' }}
                 >
                   {subSubItem.label}
                 </a>
