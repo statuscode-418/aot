@@ -25,7 +25,10 @@ const Counter = () => {
             }
         };
     }, []);
-
+    const randomStart1 = Math.floor(Math.random() * 1000) + 1;
+    const randomStart2 = Math.floor(Math.random() * 100) + 1;
+    const randomStart3 = Math.floor(Math.random() * 5000) + 1;
+    const randomStart4 = Math.floor(Math.random() * 500) + 1;
     const startCounter = () => {
         const counter = (element, options) => {
             const settings = {
@@ -67,16 +70,17 @@ const Counter = () => {
             requestAnimationFrame(animateCounter);
         };
 
-        counter('#counter1', { end: 69, duration: 3000, suffix: ' PROFESSIONAL TEACHERS' });
-        counter('#counter2', { end: 3918, duration: 3000, suffix: ' REGISTERED STUDENTS' });
-        counter('#counter3', { end: 15198, duration: 3000, suffix: ' ESTABLISHED ALUMNI' });
+        counter('#counter1', { start: randomStart1,end: 69, duration: 3000, suffix: ' PROFESSIONAL TEACHERS' });
+        counter('#counter2', { start: randomStart2,end: 3918, duration: 3000, suffix: ' REGISTERED STUDENTS' });
+        counter('#counter3', { start: randomStart3,end: 15198, duration: 3000, suffix: ' ESTABLISHED ALUMNI' });
+        counter('#counter4', { start: randomStart4,end: 150, duration: 3000, suffix: ' % PLACEMENT ON 2024' });
     };
 
     return (
     <div className="relative" ref={counterRef}>
         <img className='w-full h-[600px]' src="../assets/aot3.png" alt="Academy of Technology" />
         <div className="absolute inset-0 bg-black opacity-40"></div>
-        <div className="absolute top-1/2 left-1/2 sm:top-1/2 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-8">
+        <div className="absolute top-1/2 left-1/2 sm:top-1/2 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-12">
             <div className="text-white">
                 <span id="counter1" className="text-6xl font-bold"></span>
             </div>
@@ -85,6 +89,9 @@ const Counter = () => {
             </div>
             <div className="text-white">
                 <span id="counter3" className="text-6xl font-bold"></span>
+            </div>
+            <div className="text-white">
+                <span id="counter4" className="text-6xl font-bold"></span>
             </div>
         </div>
     </div>
