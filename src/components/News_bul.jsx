@@ -61,7 +61,7 @@ const News_bul = () => {
                     <img src={card.img} alt="" className='rounded-[20px]  w-full' />
                     </div>
               <div className="overlay absolute left-[10px] top-[50%] text-white font-bold text-[20px] bg-black/50 p-2 rounded-md">
-                      <p>{card.Title}</p>
+                      <p >{card.Title}</p>
                       {card.Author}
                     </div>
                   </div>
