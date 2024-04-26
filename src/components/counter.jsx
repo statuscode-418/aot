@@ -1,101 +1,99 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../../public/styles/animations.css';
 import '../../public/styles/bg_transparent.css';
 
 const Counter = () => {
-    const counterRef = useRef(null);
+  const [counters, setCounters] = useState([
+    { id: 'counter1', start: 0, end: 69, prefix: '', suffix: 'Professional Teachers' },
+    { id: 'counter2', start: 0, end: 3918, prefix: '', suffix: 'Registered Students' },
+    { id: 'counter3', start: 0, end: 15198, prefix: '', suffix: 'Established Alumni' },
+    { id: 'counter4', start: 0, end: 150, prefix: '', suffix: 'Placement on 2024' }
+  ]);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    startCounter();
-                    observer.unobserve(entry.target);
-                }
-            });
+  const [isVisible, setIsVisible] = useState(false);
+  const counterRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            startCounter();
+          } else {
+            setIsVisible(false);
+          }
         });
+      },
+      { threshold: 0.5 }
+    );
 
-        if (counterRef.current) {
-            observer.observe(counterRef.current);
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      startCounter();
+    }
+  }, [isVisible]);
+
+  const startCounter = () => {
+    const animateCounter = (counter) => {
+      const duration = 3000;
+      const interval = 30; // Update interval in milliseconds
+      const increment = (counter.end - counter.start) / (duration / interval);
+      let currentCount = counter.start;
+
+      const timer = setInterval(() => {
+        currentCount += increment;
+
+        if (currentCount >= counter.end) {
+          currentCount = counter.end;
+          clearInterval(timer);
         }
 
-        return () => {
-            if (counterRef.current) {
-                observer.unobserve(counterRef.current);
-            }
-        };
-    }, []);
-    const randomStart1 = Math.floor(Math.random() * 1000) + 1;
-    const randomStart2 = Math.floor(Math.random() * 100) + 1;
-    const randomStart3 = Math.floor(Math.random() * 5000) + 1;
-    const randomStart4 = Math.floor(Math.random() * 500) + 1;
-    const startCounter = () => {
-        const counter = (element, options) => {
-            const settings = {
-                start: 0,
-                end: 100,
-                easing: 'swing',
-                duration: 400,
-                complete: '',
-                suffix: ''
-            };
-
-            Object.assign(settings, options);
-
-            const thisElement = document.querySelector(element);
-
-            let startTime = null;
-
-            const animateCounter = (timestamp) => {
-                if (!startTime) startTime = timestamp;
-                const progress = timestamp - startTime;
-
-                const progressPercentage = Math.min(progress / settings.duration, 1);
-                const currentCount = Math.ceil(settings.start + (progressPercentage * (settings.end - settings.start)));
-
-                thisElement.textContent = currentCount;
-                if (settings.suffix) {
-                    thisElement.innerHTML = `<span class="text-6xl">${currentCount}</span><div class="flex flex-col justify-center h-full"><span class="text-3xl">${settings.suffix}</span></div>`;
-                }
-
-                if (progressPercentage < 1) {
-                    requestAnimationFrame(animateCounter);
-                } else {
-                    if (typeof settings.complete === 'function') {
-                        settings.complete();
-                    }
-                }
-            };
-
-            requestAnimationFrame(animateCounter);
-        };
-
-        counter('#counter1', { start: randomStart1,end: 69, duration: 3000, suffix: ' PROFESSIONAL TEACHERS' });
-        counter('#counter2', { start: randomStart2,end: 3918, duration: 3000, suffix: ' REGISTERED STUDENTS' });
-        counter('#counter3', { start: randomStart3,end: 15198, duration: 3000, suffix: ' ESTABLISHED ALUMNI' });
-        counter('#counter4', { start: randomStart4,end: 150, duration: 3000, suffix: ' % PLACEMENT ON 2024' });
+        // Update the counter
+        setCounters((prevCounters) =>
+          prevCounters.map((c) =>
+            c.id === counter.id ? { ...c, start: Math.ceil(currentCount) } : c
+          )
+        );
+      }, interval);
     };
 
-    return (
+    // Start each counter animation
+    counters.forEach((counter) => animateCounter(counter));
+  };
+
+  return (
     <div className="relative" ref={counterRef}>
-        <img className='w-full h-[600px]' src="../assets/aot3.png" alt="Academy of Technology" />
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-        <div className="absolute top-1/2 left-1/2 sm:top-1/2 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-12">
-            <div className="text-white">
-                <span id="counter1" className="text-6xl font-bold"></span>
+      <img className="w-full h-[600px]" src="../assets/aot3.png" alt="Academy of Technology" />
+      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute top-1/2 left-1/2 sm:top-1/2 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-12">
+        {counters.map((counter, key) => (
+          <div className="text-white flex items-center" key={counter.id}>
+            <span className="text-6xl font-bold flex items-center">
+              {counter.start}
+              {counter.id === 'counter4' && <span className="text-5xl">%</span>}
+            </span>
+            <div className="ml-2">
+              <div className="text-3xl">{counter.prefix}</div>
+              {counter.id === 'counter4' && <div className="text-3xl">{counter.suffix}</div>}
+              {counter.id !== 'counter4' && <div className="text-3xl">{counter.suffix}</div>}
             </div>
-            <div className="text-white">
-                <span id="counter2" className="text-6xl font-bold"></span>
-            </div>
-            <div className="text-white">
-                <span id="counter3" className="text-6xl font-bold"></span>
-            </div>
-            <div className="text-white">
-                <span id="counter4" className="text-6xl font-bold"></span>
-            </div>
-        </div>
+          </div>
+        ))}
+      </div>
     </div>
-    );
-}
+  );
+};
 
 export default Counter;
