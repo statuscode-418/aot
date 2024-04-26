@@ -1,14 +1,35 @@
-import React, { useState } from 'react';
-import MenuItem from './menuItem'; // Importing the MenuItem component
+// Navbar.js
+import React, { useState, useEffect } from 'react';
+import MenuItem from './menuItem.jsx'; // Importing the MenuItem component
 import { Menu } from '../../constants/menu';
+import HamburgerMenu from './hamburger';
+
 const Navbar = () => {
   const [isSearching, setIsSearching] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenWidth = () => {
+      setIsSmallScreen(window.innerWidth <= 768); // Adjust the threshold as needed
+    };
+
+    checkScreenWidth(); // Check screen width on initial render
+
+    window.addEventListener('resize', checkScreenWidth); // Listen for window resize events
+
+    return () => {
+      window.removeEventListener('resize', checkScreenWidth); // Clean up event listener on component unmount
+    };
+  }, []);
 
   const toggleSearch = () => {
     setIsSearching(!isSearching);
   };
 
   const renderMenuItems = (items) => {
+    if (isSmallScreen) {
+      return null; // Don't render menu items on small screens
+    }
     return items.map((item, index) => (
       <MenuItem key={index} item={item} />
     ));
@@ -18,6 +39,7 @@ const Navbar = () => {
     <nav className="bg-yellow-500 border-y border-gray-300">
       <div className="container mx-auto px-4 py-2 text-[#000080] text-x">
         <ul className="flex justify-between items-center">
+          {isSmallScreen && <HamburgerMenu />} {/* Render HamburgerMenu for smaller devices */}
           {renderMenuItems(Menu)}
           <li>
             {isSearching ? (
