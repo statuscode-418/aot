@@ -65,7 +65,7 @@ const News_bul = () => {
                       {card.Author}
                     </div>
                   </div>
-                  <div className="names border-2 border-black p-4 m-3 rounded-md text-[20px] font-bold pt-4 flex items-center justify-center flex-col">
+                  <div className="names border-[3px] border-black p-4 m-3 rounded-md text-[20px] font-bold pt-4 flex items-center justify-center flex-col">
                   <h1> {card.details} </h1>
                     <div className='m-3'> 
                     <motion.button
