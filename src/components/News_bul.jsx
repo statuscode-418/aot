@@ -75,7 +75,7 @@ const News_bul = () => {
                        transition={{ duration: 0.3 }}
                        className="bg-blue-500 text-white px-4 border-2 border-black py-2 rounded-md"
           >
-                <a href={card.link} className="text-white hover:underline">Read more...</a>
+                <a href={card.link} className="text-black hover:underline">Read more...</a>
                     </motion.button>
                     </div>
                     </div>
@@ -90,7 +90,7 @@ const News_bul = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            className="bg-blue-500 border-2 border-black text-white px-4 py-2 rounded-md"
+            className="bg-blue-500 border-2 border-black text-black font-bold px-4 py-2 rounded-md"
           >
             Previous
           </motion.button>
@@ -99,7 +99,7 @@ const News_bul = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            className="bg-blue-500 text-white px-4 border-2 border-black py-2 rounded-md"
+            className="bg-blue-500 text-black font-bold px-4 border-2 border-black py-2 rounded-md"
           >
             Next
           </motion.button>
