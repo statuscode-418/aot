@@ -8,9 +8,10 @@ import News_bul from "../components/News_bul.jsx";
 // import Video from "../components/video.jsx";
 import Video from "../components/video.astro";
 import AboutCollegeV2 from "../components/aboutCollegeV2.astro";
-import Header from "../components/header.jsx"
-import Navbar from "../components/Navbar/navbar.jsx"
+import Header from "../components/header.jsx";
+import Navbar from "../components/Navbar/navbar.jsx";
 import Counter from "../components/counter";
+import { EventComponent } from "../components/events/eventComponent";
 ---
 
 <html lang="en">
@@ -23,12 +24,13 @@ import Counter from "../components/counter";
 		<title>Academy Of Technology</title>
 	</head>
 	<body class="bg-aot-bone">
-    <Header client:load />
-    <Navbar client:load />
-		 <Video client:load /> 
+		<Header client:load />
+		<Navbar client:load />
+		<Video />
 		<Movement client:load />
 		<!--CardWrapper client:load -->
-		<AboutCollegeV2></AboutCollegeV2>
+		<EventComponent client:load />
+		<AboutCollegeV2 />
 		<News_bul client:load />
 		<Counter client:load />
 		<Companies client:load />

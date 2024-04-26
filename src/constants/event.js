@@ -1,7 +1,7 @@
-import EventModel from './models/eventModel.js';
+import { EventModel } from '../models/eventModel.js';
 
 
-const events = [
+export const events = [
   new EventModel("TechFesta", "https://www.techfesta.com/", "2018-06-09", "Annual Techfest in Academy of Technology"),
   new EventModel("C3IT", "https://www.c3it.com/", "2018-06-09", "First Annual C3IT Conference in Academy of Technology"),
   new EventModel("Symposium", "https://www.symposium.com/", "2018-06-09", "One day offline conference in Academy of Technology"),
