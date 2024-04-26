@@ -35,8 +35,8 @@ const News_bul = () => {
   };
 
   return (
-    <div className='p-12 flex flex-col justify-between lg:p-[7rem] pb-10 '>
-      <div className="text-[35px] font-bold text-black border-2 w-full border-black flex flex-col justify-center items-center p-4"><h1>News Bulletin :</h1></div>
+    <div className='p-12 flex flex-col justify-between lg:p-2 '>
+      <div className="text-[35px]  font-bold text-black border-2 w-full border-black flex flex-col justify-center items-center p-4"><h1>News Bulletin :</h1></div>
       <div className="hidden lg:block ">
         <div className="all_news_container flex m-5 justify-between flex-wrap gap-15 items-center">
           <Swiper
@@ -84,7 +84,7 @@ const News_bul = () => {
             ))}
           </Swiper>
         </div>
-        <div className="flex justify-center mt-5 gap-4">
+        <div className="flex justify-center mt-15 gap-4">
           <motion.button
             onClick={handlePrevButtonClick}
             whileHover={{ scale: 1.1 }}
