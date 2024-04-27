@@ -8,18 +8,7 @@ import { motion } from 'framer-motion';
 const News_bul = () => {
   const [swiper, setSwiper] = useState(null);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-
-  const handlePrevButtonClick = () => {
-    if (swiper !== null) {
-      swiper.slidePrev();
-    }
-  };
-
-  const handleNextButtonClick = () => {
-    if (swiper !== null) {
-      swiper.slideNext();
-    }
-  };
+  const [hoverIndex, setHoverIndex] = useState(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,6 +20,14 @@ const News_bul = () => {
 
     return () => clearInterval(interval);
   }, [swiper, currentSlideIndex]);
+
+  const handleMouseEnter = (index) => {
+    setHoverIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoverIndex(null);
+  };
 
   return (
     <div className='p-12 flex flex-col justify-between lg:p-2 '>
@@ -53,6 +50,8 @@ const News_bul = () => {
                   }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.3 }}
+                  onMouseEnter={() => handleMouseEnter(id)}
+                  onMouseLeave={handleMouseLeave}
                 >
                   <div className="image-container relative w-[60vw] lg:w-[23vw]">
                     <div className='border-2 border-black rounded-[20px]'>
@@ -66,41 +65,27 @@ const News_bul = () => {
                   <div className="names border-[3px] border-black p-4 m-3 rounded-md text-[20px] font-bold pt-4 flex items-center justify-center flex-col">
                     <h1> {card.details} </h1>
                     <div className='m-3'>
-                      <motion.button
-                        onClick={handlePrevButtonClick}
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        transition={{ duration: 0.3 }}
-                        className="bg-blue-500 text-white px-4 border-2 border-black py-2 rounded-md"
-                      >
-                        <a href={card.link} className="text-black hover:underline">Read more...</a>
-                      </motion.button>
+                      {hoverIndex === id ? (
+                        <motion.a
+                          href={card.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          transition={{ duration: 0.3 }}
+                          className="bg-blue-500 text-white px-4 border-2 border-black py-2 rounded-md"
+                        >
+                          Read more...
+                        </motion.a>
+                      ) : (
+                        <p>{new Date().toLocaleDateString()}</p>
+                      )}
                     </div>
                   </div>
                 </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
-        <div className="flex justify-center mt-15 gap-4">
-          <motion.button
-            onClick={handlePrevButtonClick}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ duration: 0.3 }}
-            className="bg-blue-500 border-2 border-black text-black font-bold px-4 py-2 rounded-md"
-          >
-            Previous
-          </motion.button>
-          <motion.button
-            onClick={handleNextButtonClick}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ duration: 0.3 }}
-            className="bg-blue-500 text-black font-bold px-4 border-2 border-black py-2 rounded-md"
-          >
-            Next
-          </motion.button>
         </div>
       </div>
       <div className="mobile lg:hidden">
@@ -111,4 +96,3 @@ const News_bul = () => {
 }
 
 export default News_bul;
-
