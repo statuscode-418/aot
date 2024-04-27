@@ -60,7 +60,6 @@ const Counter = () => {
           clearInterval(timer);
         }
 
-        // Update the counter
         setCounters((prevCounters) =>
           prevCounters.map((c) =>
             c.id === counter.id ? { ...c, start: Math.ceil(currentCount) } : c
@@ -69,7 +68,6 @@ const Counter = () => {
       }, interval);
     };
 
-    // Start each counter animation
     counters.forEach((counter) => animateCounter(counter));
   };
 
