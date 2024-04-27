@@ -44,11 +44,11 @@ export const Menu = [
         subSubmenu: [
           {
             label: 'UG Admission',
-            link: 'admissions/ug-admission',
+            link: 'academics/admissions/ug-admission',
           },
           {
             label: 'PG Admission',
-            link: 'admissions/pg-admission',
+            link: 'academics/admissions/pg-admission',
           },
         ],
       },
@@ -59,15 +59,15 @@ export const Menu = [
     submenu: [
       {
         label: 'Current Research',
-        link: '/current-research',
+        link: 'research/current-research',
       },
       {
         label: 'Past Research',
-        link: '/past-research',
+        link: 'research/past-research',
       },
       {
         label: 'Research Facilities',
-        link: '/research-facilities',
+        link: 'research/research-facilities',
       },
     ],
   },
@@ -76,19 +76,19 @@ export const Menu = [
     submenu: [
       {
         label: 'Life@AOT',
-        link: '/life-at-aot',
+        link: 'students/life-at-aot',
       },
       {
         label: 'Campus Facilities',
-        link: '/campus-facilities',
+        link: 'students/campus-facilities',
       },
       {
         label: 'Career Services',
-        link: '/career-services',
+        link: 'students/career-services',
       },
       {
         label: 'Events',
-        link: '/events',
+        link: 'students/events',
       },
     ],
   },
@@ -97,15 +97,15 @@ export const Menu = [
     submenu: [
       {
         label: 'Faculty List',
-        link: '/faculty-list',
+        link: 'faculty/faculty-list',
       },
       {
         label: 'Faculty Positions',
-        link: '/faculty-positions',
+        link: 'faculty/faculty-positions',
       },
       {
         label: 'Career Benefits@AOT',
-        link: '/career-benefits',
+        link: 'faculty/career-benefits',
       },
     ],
   },

@@ -15,7 +15,7 @@ const MenuItem = ({ item }) => {
         onMouseLeave={handleHover}
         className="cursor-pointer font-bold uppercase hover:bg-gray-200 focus:outline-none px-4 py-2 rounded-md relative"
       >
-        {item.label}
+        <a href={item.link} className="block w-full h-full">{item.label}</a>
         {item.submenu && isHovered && (
           <motion.div
             initial={{ opacity: 0, x: 10, y: -10 }}
@@ -45,7 +45,7 @@ const MenuItem = ({ item }) => {
                 <a
                   href={subSubItem.link}
                   className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
-                  //style={{ textDecoration: 'underline' }}
+                //style={{ textDecoration: 'underline' }}
                 >
                   {subSubItem.label}
                 </a>
@@ -67,7 +67,7 @@ const MenuItem = ({ item }) => {
                 <a
                   href={subSubItem.link}
                   className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
-                  //style={{ textDecoration: 'underline' }}
+                //style={{ textDecoration: 'underline' }}
                 >
                   {subSubItem.label}
                 </a>
