@@ -31,11 +31,11 @@ export const Menu = [
         subSubmenu: [
           {
             label: 'Library',
-            link: '/resources/library',
+            link: 'http://182.74.215.202:8001/',
           },
           {
             label: 'Moodle',
-            link: '/resources/moodle',
+            link: 'http://182.74.215.198/moodle/',
           },
         ],
       },
@@ -44,11 +44,11 @@ export const Menu = [
         subSubmenu: [
           {
             label: 'UG Admission',
-            link: '/ug-admission',
+            link: 'admissions/ug-admission',
           },
           {
             label: 'PG Admission',
-            link: '/pg-admission',
+            link: 'admissions/pg-admission',
           },
         ],
       },
