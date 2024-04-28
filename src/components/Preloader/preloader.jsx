@@ -3,7 +3,8 @@ import {useEffect , useState} from 'react'
 import {motion} from 'framer-motion'
 import {opacity , slideUp} from './anime'
 import './style.css'
-const words = Array.from({ length: 2024 - 1995 + 1 }, (_, index) => String(1995 + index))
+
+export const words = Array.from({ length: 2024 - 1995 + 1 }, (_, index) => String(1995 + index))
 
 export const preloader = () => {
   const [index , setIndex] = useState(0)

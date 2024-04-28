@@ -4,37 +4,40 @@ import BackToTop from './backToTop'
 import Companies from './companies'
 import Counter from './counter'
 import Navbar from './Navbar/navbar'
-import { EventComponent } from "../components/events/eventComponent";
+import { EventComponent } from "./events/eventComponent";
 import Footer from './footer'
 import Header from './header'
 import Movement from './movement'
 import News_bul from './News_bul'
 import Video from './video'
-import Preloader from './Preloader/preloader'
+import Preloader from './Preloader/preloader.jsx'
 import {AnimatePresence} from 'framer-motion'
 
-const main = () => {
-     const [isLoading, setIsLoading] = useState(true);
+const main =  () => {
+     const [isLoading, setIsLoading] = useState(false);
 
-  useEffect( () => {
-    (
-      async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
+     useEffect(() => {
+      (async () => {
+        try {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default;
           const locomotiveScroll = new LocomotiveScroll();
-
-          setTimeout( () => {
+    
+          setTimeout(() => {
             setIsLoading(false);
-            document.body.style.cursor = 'default'
-            window.scrollTo(0,0);
-          }, 2000)
-      }
-    )()
-  }, [])
+            document.body.style.cursor = 'default';
+            window.scrollTo(0, 0);
+          }, 2000);
+        } catch (error) {
+          console.error("Failed to load locomotive-scroll:", error);
+          setIsLoading(false); 
+        }
+      })();
+    }, []);
 
   return (
   <>
     <AnimatePresence mode='wait'>
-        {isLoading && <Preloader />}
+        {!isLoading && <Preloader />}
       </AnimatePresence>
     <Header  />
 		<Navbar />
