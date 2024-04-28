@@ -14,7 +14,7 @@ import { Preloader } from './Preloader/preloader.jsx'
 import {AnimatePresence} from 'framer-motion'
 
 const main =  () => {
-     const [isLoading, setIsLoading] = useState(false);
+     const [isLoading, setIsLoading] = useState(true);
 
      useEffect(() => {
       (async () => {
@@ -26,7 +26,7 @@ const main =  () => {
             setIsLoading(false);
             document.body.style.cursor = 'default';
             window.scrollTo(0, 0);
-          }, 2000);
+          }, 5000);
         } catch (error) {
           console.error("Failed to load locomotive-scroll:", error);
           setIsLoading(false); 
@@ -37,7 +37,7 @@ const main =  () => {
   return (
   <>
     <AnimatePresence mode='wait'>
-        {!isLoading && <Preloader />}
+        {isLoading && <Preloader />}
       </AnimatePresence>
     <Header  />
 		<Navbar />

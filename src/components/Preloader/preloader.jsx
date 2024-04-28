@@ -37,7 +37,8 @@ export const Preloader = () => {
     }
 
     return (
-        <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
+        <motion.div variants={slideUp} initial="initial" exit="exit" className= 'introduction'>
+
             {dimension.width > 0 && 
             <>
                 <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p>
