@@ -10,7 +10,7 @@ import Header from './header'
 import Movement from './movement'
 import News_bul from './News_bul'
 import Video from './video'
-import Preloader from './Preloader/preloader.jsx'
+import { Preloader } from './Preloader/preloader.jsx'
 import {AnimatePresence} from 'framer-motion'
 
 const main =  () => {

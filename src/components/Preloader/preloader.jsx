@@ -6,11 +6,11 @@ import './style.css'
 
 export const words = Array.from({ length: 2024 - 1995 + 1 }, (_, index) => String(1995 + index))
 
-export const preloader = () => {
+export const Preloader = () => {
   const [index , setIndex] = useState(0)
   const [dimension ,setDimension] = useState({width: 0 , height: 0})
 
-  
+   
     useEffect( () => {
         setDimension({width: window.innerWidth, height: window.innerHeight})
     }, [])
