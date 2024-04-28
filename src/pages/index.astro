@@ -1,18 +1,7 @@
 ---
 import "../../public/styles/main.css";
 import "../../public/styles/fonts.css";
-import Footer from "../components/footer.jsx";
-import Movement from "../components/movement.jsx";
-import Companies from "../components/companies.jsx";
-import News_bul from "../components/News_bul.jsx";
-// import Video from "../components/video.jsx";
-import Video from "../components/video.astro";
-import AboutCollegeV2 from "../components/aboutCollegeV2.astro";
-import Header from "../components/header.jsx";
-import Navbar from "../components/Navbar/navbar.jsx";
-import Counter from "../components/counter";
-import { EventComponent } from "../components/events/eventComponent";
-import BackToTopButton from "../components/backToTop";
+import Main from '../components/main.jsx'
 import '../../public/styles/scroll.css'
 ---
 
@@ -26,18 +15,6 @@ import '../../public/styles/scroll.css'
 		<title>Academy Of Technology</title>
 	</head>
 	<body class="bg-aot-bone overflow-x-hidden scrollbar-hide">
-		<Header client:load />
-		<Navbar client:load />
-		<Video />
-		<Movement client:load />
-		<!--CardWrapper client:load -->
-		<EventComponent client:load />
-		<AboutCollegeV2 />
-		<News_bul client:load />
-		<Counter client:load />
-		<Companies client:load />
-		<Footer client:load />
-		<!-- <Footer client:load /> -->
-		<BackToTopButton client:load/>
-	</body>
+    <Main client:load />	
+  </body>
 </html>

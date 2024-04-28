@@ -1,8 +1,8 @@
----
+import React from 'react'
 
----
-
-<div class="bg-[url(../assets/aot2.jpg)] h-[80vh] bg-cover p-10 my-2">
+const aboutCollegeV2 = () => {
+  return (
+    <div class="bg-[url(../assets/aot2.jpg)] h-[80vh] bg-cover p-10 my-2">
     <div
         class="h-[10%] w-full text-center text-white flex justify-center items-center lg:text-4xl md:text-3xl text-2xl font-bold"
     >
@@ -42,3 +42,9 @@
         </div>
     </div>
 </div>
+  )
+}
+
+export default aboutCollegeV2
+
+

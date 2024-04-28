@@ -31,7 +31,7 @@ const News_bul = () => {
 
   return (
     <div className='p-12 flex flex-col justify-between lg:p-2 '>
-      <div className="text-[35px]  font-bold text-black border-2 w-full border-black flex flex-col justify-center items-center p-4"><h1>News Bulletin :</h1></div>
+      <div className="text-[35px]  font-bold text-black  w-full  flex flex-col justify-center items-center p-4"><h1>News Bulletin :</h1></div>
       <div className="hidden lg:block ">
         <div className="all_news_container pl-20 flex m-5 justify-between flex-wrap gap-15 items-center">
           <Swiper
