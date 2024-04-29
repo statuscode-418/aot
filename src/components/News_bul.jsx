@@ -32,18 +32,19 @@ const News_bul = () => {
   return (
     <div className='p-12 flex flex-col justify-between lg:p-2 '>
       <div className="text-[35px]  font-bold text-black  w-full  flex flex-col justify-center items-center p-4"><h1>News Bulletin :</h1></div>
-      <div className="hidden lg:block ">
-        <div className="all_news_container pl-20 flex m-5 justify-between flex-wrap gap-15 items-center">
+      <div className="hidden lg:block">
+        <div className="all_news_container pl-20 flex m-5 justify-between flex-wrap gap-15 items-center ">
           <Swiper
             spaceBetween={50}
             slidesPerView={3}
             onSlideChange={() => console.log('slide change')}
             onSwiper={setSwiper}
+            className=' flex items-center justify-center'
           >
             {news.map((card, id) => (
               <SwiperSlide key={id}>
                 <motion.div
-                  className='p-4 border-[3px] border-black rounded-[20px] w-[90vw] lg:w-[25vw] shadow-lg transform perspective-1000'
+                  className='p-4 border-[3px] border-black rounded-[20px] w-[90vw] lg:w-[25vw] shadow-lg transform perspective-1000 m-[10px]'
                   whileHover={{
                     scale: 1.01,
                     boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(0, 0, 0, 0.2)',
