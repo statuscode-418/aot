@@ -42,10 +42,10 @@ const MenuItem = ({ item }) => {
             exit={{ opacity: 0, x: 10, y: -10 }}
             transition={{ duration: 0.2 }}
             className="absolute left-full top-0 mt-1 w-[200px] bg-[#ffd700] shadow-md rounded-md p-2 z-10 border border-black"
-            style={{ border: '1px solid #000000' }}
+            style={{ border: '2px solid #000000' }}
           >
             {item.subSubmenu.map((subSubItem, index) => (
-              <div key={index} className="py-1 border border-black">
+              <div key={index} className="py-1 border-b border-black">
                 <div className="cursor-pointer text-[#000080] font-bold uppercase hover:bg-[#0047ab] hover:text-white focus:outline-none px-4 py-2 relative">
                   <a
                     href={subSubItem.link}
