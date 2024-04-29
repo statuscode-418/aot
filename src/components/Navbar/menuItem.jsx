@@ -35,7 +35,7 @@ const MenuItem = ({ item }) => {
           </motion.div>
         )}
         {/* Render subSubmenu for Resources and Admissions */}
-        {(item.label === "Resources" || item.label === "Admissions") && isHovered && (
+        {(item.label === "Resources" || item.label === "Admissions" || item.label === "Department") && isHovered && (
           <motion.div
             initial={{ opacity: 0, x: 10, y: -10 }}
             animate={{ opacity: 1, x: 0, y: 0 }}

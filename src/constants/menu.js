@@ -4,7 +4,37 @@ export const Menu = [
     submenu: [
       {
         label: 'Department',
-        link: '/academics/departments',
+        subSubmenu: [
+          {
+            label: 'CSE',
+            link: '/academics/department/cse',
+          },
+          {
+            label: 'CSBS',
+            link: '/academics/department/csbs',
+          },
+          {
+            label: 'ECE',
+            link: '/academics/department/ece',
+          },
+          {
+            label: 'EEE',
+            link: '/academics/department/eee',
+          },
+          {
+            label: 'EE',
+            link: '/academics/department/ee',
+          },
+          {
+            label: 'ME',
+            link: '/academics/department/me',
+          },
+
+          {
+            label: 'MCA',
+            link: '/academics/department/mca',
+          },
+        ]
       },
       {
         label: 'UG Programs',
