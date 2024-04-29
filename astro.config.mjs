@@ -3,6 +3,8 @@ import react from '@astrojs/react';
 import tailwind from "@astrojs/tailwind";
 import vue from "@astrojs/vue";
 
+import vercel from "@astrojs/vercel/serverless";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [react({
@@ -10,5 +12,9 @@ export default defineConfig({
     experimentalReactChildren: true
   }), tailwind({
     config: './tailwind.config.mjs'
-  }), vue()]
+  }), vue()],
+  output: "server",
+  adapter: vercel({
+   imageService: true, 
+  }),
 });
