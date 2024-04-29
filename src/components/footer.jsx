@@ -1,16 +1,15 @@
 import React from 'react';
 import { FaInstagram, FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
-//import { FaSquareXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
     return (
-        <footer className='bg-gray-800 text-white py-8 px-4  min-h-auto md:min-h-auto'>
+        <footer className='bg-gray-800 text-white py-8 px-4 md:min-h-auto'>
             <div className='flex flex-col md:flex-row ml-8'>
 
-                <div className='flex-1'>
+                <div className='flex-1 mb-8 md:mb-0'>
                     <img src="../assets/aot-logo.jpg" alt="AOT" />
                     <h1 className="text-3xl mb-2 mt-4">ACADEMY OF TECHNOLOGY</h1>
                     <p className="text-lg">
@@ -35,40 +34,40 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright and academics wagera div */}
-                <div className='flex-1'>
+                <div className='flex-1 mb-8 md:mb-0'>
                     <div className="flex justify-center w-full">
                         <div>
                             <div>
-                                <nav className="flex space-x-4 justify-center mt-4">
-                                    <a href="#" className="text-gray-300 hover:text-white">
+                                <nav className="flex flex-col md:flex-row space-x-0 md:space-x-4 justify-center mt-4">
+                                    <a href="#" className="text-gray-300 hover:text-white mb-2 md:mb-0 mr-2 md:mr-0">
                                         Academics
                                     </a>
-                                    <a href="#" className="text-gray-300 hover:text-white">
+                                    <a href="#" className="text-gray-300 hover:text-white mb-2 md:mb-0 mr-2 md:mr-0">
                                         Research
                                     </a>
-                                    <a href="#" className="text-gray-300 hover:text-white">
+                                    <a href="#" className="text-gray-300 hover:text-white mb-2 md:mb-0 mr-2 md:mr-0">
                                         Events
                                     </a>
-                                    <a href="#" className="text-gray-300 hover:text-white">
+                                    <a href="#" className="text-gray-300 hover:text-white mb-2 md:mb-0">
                                         News Bulletin
                                     </a>
                                 </nav>
                             </div>
-                            <div className='mt-60'>
-                                <nav className="flex space-x-4 justify-center">
-                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap">
+                            <div className='mt-8 md:mt-60'>
+                                <nav className="flex flex-col md:flex-row space-x-0 md:space-x-4 justify-center">
+                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
                                         Land Acknowledgement
                                     </a>
-                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap">
+                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
                                         Disclaimer
                                     </a>
-                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap">
+                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
                                         Copyright Infringement
                                     </a>
-                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap">
+                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
                                         Privacy Statement
                                     </a>
-                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap">
+                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap mb-2 md:mb-0">
                                         Non Discrimination
                                     </a>
                                 </nav>
@@ -82,9 +81,9 @@ const Footer = () => {
 
                 {/* Map and socials left div */}
                 <div className='flex-1'>
-                    <div className="absolute right-0">
-                        <div className="flex flex-col col-span-1 mr-8">
-                            <nav className=" flex space-x-4 justify-end">
+                    <div className="md:absolute right-0">
+                        <div className="flex flex-col md:col-span-1 mr-8">
+                            <nav className="flex space-x-4 justify-center md:justify-end mb-8 md:mb-0">
                                 <motion.a
                                     href="https://www.facebook.com/www.aot.edu.in"
                                     className="text-gray-300"
@@ -126,23 +125,24 @@ const Footer = () => {
                                     <FaYoutube size={32} />
                                 </motion.a>
                             </nav>
-                            <h2 className="text-2xl mb-2 mt-8">Locate Us</h2>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.111293948669!2d88.37654!3d22.95300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4de2e7a2a27%3A0x27b4e3a65c28867a!2sAcademy%20of%20Technology!5e0!3m2!1sen!2sin!4v1632734095701!5m2!1sen!2sin"
-                                width="300"
-                                height="200"
-                                style={{ border: 0 }}
-                                allowFullScreen=""
-                                loading="lazy"
-                                title="Location Map"
-                            ></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    )
+                            <div className='mb-8 md:mb-0'>
+                                <h2 className="text-2xl mb-2 mt-2">Locate Us</h2>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.111293948669!2d88.37654!3d22.95300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4de2e7a2a27%3A0x27b4e3a65c28867a!2sAcademy%20of%20Technology!5e0!3m2!1sen!2sin!4v1632734095701!5m2!1sen!2sin"
+                                   width="300"
+                                   height="200"
+                                   style={{ border: 0 }}
+                                   allowFullScreen=""
+                                   loading="lazy"
+                                   title="Location Map"
+                               ></iframe>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </footer>
+   )
 }
 
-
-export default Footer
+export default Footer;
