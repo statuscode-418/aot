@@ -36,7 +36,7 @@ const aboutCollegeV2 = () => {
         </div>
         <div class="w-1/2 justify-center items-center hidden md:flex">
             <div
-                class="bg-[url('../assets/aot1.png')] bg-cover border-[5px] border-white w-9/12 h-[75%] rounded-xl"
+                class="bg-[url('../assets/aot1.png')] bg-cover border-[5px] border-white w-9/12 h-[75%] rounded-[1.8rem]"
             >
             </div>
         </div>
