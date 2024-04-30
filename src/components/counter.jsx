@@ -73,7 +73,8 @@ const Counter = () => {
 
   return (
     <div className="relative" ref={counterRef}>
-      <img className="w-full h-[600px]" src="../assets/aot3.png" alt="Academy of Technology" />
+      {/* <img className="w-full h-[600px]" src="/assets/aot3.png" alt="Academy of Technology" /> */}
+      <div class="bg-[url('/assets/aot3.png')] bg-cover h-[600px] bg-bottom"> </div>
       <div className="absolute inset-0 bg-black opacity-40"></div>
       <div className="absolute top-1/2 left-1/2 sm:top-1/2 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-12">
         {counters.map((counter, key) => (

@@ -2,7 +2,7 @@ import React from 'react'
 
 const aboutCollegeV2 = () => {
   return (
-    <div class="bg-[url(../assets/aot2.jpg)] h-[80vh] bg-cover p-10 my-2">
+    <div class="bg-[url(/assets/aot2.jpg)] h-[80vh] bg-cover p-10 my-2">
     <div
         class="h-[10%] w-full text-center text-white flex justify-center items-center lg:text-4xl md:text-3xl text-2xl font-bold"
     >
@@ -36,7 +36,7 @@ const aboutCollegeV2 = () => {
         </div>
         <div class="w-1/2 justify-center items-center hidden md:flex">
             <div
-                class="bg-[url('../assets/aot1.png')] bg-cover border-[5px] border-white w-9/12 h-[75%] rounded-[1.8rem]"
+                class="bg-[url('/assets/aot1.png')] bg-cover border-[5px] border-white w-9/12 h-[75%] rounded-[1.8rem]"
             >
             </div>
         </div>
