@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+
 import '../../public/styles/animations.css';
 import '../../public/styles/bg_transparent.css';
 
@@ -41,23 +42,24 @@ const Counter = () => {
 
   const startCounter = () => {
     const duration = 3000;
-    const interval = 30; // Update interval in milliseconds
+    const interval = 30;
 
-    counter.forEach((counter) => {
-      const increment = (counter.end - counter.start) / (duration / interval);
-      let currentCount = counter.start;
+    counter.forEach((counterItem) => {
+      const { id, start, end } = counterItem;
+      const increment = (end - start) / (duration / interval);
+      let currentCount = start;
 
       const timer = setInterval(() => {
         currentCount += increment;
 
-        if (currentCount >= counter.end) {
-          currentCount = counter.end;
+        if (currentCount >= end) {
+          currentCount = end;
           clearInterval(timer);
         }
 
         setCounter((prevCounter) =>
           prevCounter.map((c) =>
-            c.id === counter.id ? { ...c, start: Math.ceil(currentCount) } : c
+            c.id === id ? { ...c, start: Math.ceil(currentCount) } : c
           )
         );
       }, interval);
@@ -65,10 +67,12 @@ const Counter = () => {
   };
 
   return (
-
     <div className="relative flex flex-col items-center justify-center h-[600px] bg-cover bg-bottom bg-[url('/assets/aot3.png')]">
       <div className="absolute inset-0 bg-black opacity-40"></div>
-      <div className="absolute top-1/2 left-1/2 sm:top-1/2 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-12">
+      <div
+        className="absolute top-1/2 left-1/2 sm:top-1/2 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-12"
+        ref={counterRef}
+      >
         {counter.map((counter, key) => (
           <div className="text-white flex items-center" key={counter.id}>
             <span className="text-6xl font-bold flex items-center">
@@ -88,7 +92,3 @@ const Counter = () => {
 };
 
 export default Counter;
-
-
-
-

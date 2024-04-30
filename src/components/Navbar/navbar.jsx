@@ -5,11 +5,11 @@ import HamburgerMenu from './hamburger';
 
 const Navbar = () => {
   const [isSearching, setIsSearching] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
     const checkScreenWidth = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
+      setIsLargeScreen(window.innerWidth >= 768); 
     };
 
     checkScreenWidth();
@@ -24,23 +24,21 @@ const Navbar = () => {
     setIsSearching(!isSearching);
   };
 
-  const renderMenuItems = (items) => {
-    if (isSmallScreen) {
-      return null;
+  const renderMenuItems = () => {
+    if (isLargeScreen) {
+      return Menu.map((item, index) => <MenuItem key={index} className='border-none' item={item} />);
     }
-
-    return items.map((item, index) => <MenuItem key={index} className='border-none' item={item} />);
+    return <HamburgerMenu />;
   };
 
   return (
     <nav className="bg-[#FFD700] ">
       <div className="container mx-auto px-4 py-2 text-[#000080] text-xl">
-        <ul className="flex  justify-between items-center">
+        <ul className="flex justify-between items-center">
           <li>
-          <div className="flex justify-center space-x-10 flex-wrap">
-            {isSmallScreen && <HamburgerMenu />}
-            {renderMenuItems(Menu)}
-          </div>
+            <div className="flex justify-center space-x-10 flex-wrap">
+              {renderMenuItems()}
+            </div>
           </li>
           <li>
             {isSearching ? (
