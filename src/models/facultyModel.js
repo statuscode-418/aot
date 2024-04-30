@@ -1,8 +1,8 @@
 export class FacultyModel {
-  constructor(faculty_name, faculty_department, faculty_designation, faculty_image_url) {
-    this.faculty_name = faculty_name;
-    this.faculty_department = faculty_department;
-    this.faculty_designation = faculty_designation;
-    this.faculty_image_url = faculty_image_url;
+  constructor(name, department, designation, image_url) {
+    this.name = name;
+    this.department = department;
+    this.designation = designation;
+    this.image_url = image_url;
   }
 }
