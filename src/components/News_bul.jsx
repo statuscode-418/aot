@@ -55,11 +55,8 @@ const News_bul = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <div className="image-container relative w-[60vw] lg:w-[23vw]">
-                    <div className="border-2 border-black rounded-[20px] w-full h-[200px] object-cover"
-                      style={{ backgroundImage: `url(${card.img})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                      {/* <img src={card.img} alt="" className='rounded-[20px]  w-full h-[200px] object-cover' /> */}
+                      <img src={card.img} alt="" className='rounded-[20px]  w-full h-[200px] object-cover' />
                       
-                    </div>
                     <div className="overlay absolute left-[10px] top-[50%] text-white font-bold text-[20px] bg-black/50 p-2 rounded-md">
                       <p >{card.Title}</p>
                       {card.Author}
