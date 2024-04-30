@@ -36,10 +36,12 @@ const Navbar = () => {
     <nav className="bg-[#FFD700] ">
       <div className="container mx-auto px-4 py-2 text-[#000080] text-xl">
         <ul className="flex  justify-between items-center">
+          <li>
           <div className="flex justify-center space-x-10 flex-wrap">
             {isSmallScreen && <HamburgerMenu />}
             {renderMenuItems(Menu)}
           </div>
+          </li>
           <li>
             {isSearching ? (
               <div className="flex">

@@ -55,19 +55,19 @@ const Footer = () => {
                             </div>
                             <div className='mt-8 md:mt-60'>
                                 <nav className="flex flex-col md:flex-row space-x-0 md:space-x-4 justify-center">
-                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
+                                    <a href="#" className="text-gray-300 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
                                         Land Acknowledgement
                                     </a>
-                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
+                                    <a href="#" className="text-gray-300 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
                                         Disclaimer
                                     </a>
-                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
+                                    <a href="#" className="text-gray-300 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
                                         Copyright Infringement
                                     </a>
-                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
+                                    <a href="#" className="text-gray-300 hover:text-white whitespace-nowrap mb-2 md:mb-0 mr-2 md:mr-0">
                                         Privacy Statement
                                     </a>
-                                    <a href="#" className="text-gray-500 hover:text-white whitespace-nowrap mb-2 md:mb-0">
+                                    <a href="#" className="text-gray-300 hover:text-white whitespace-nowrap mb-2 md:mb-0">
                                         Non Discrimination
                                     </a>
                                 </nav>

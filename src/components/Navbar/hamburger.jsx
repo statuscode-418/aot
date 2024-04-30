@@ -14,6 +14,7 @@ const HamburgerMenu = () => {
       <button
         className="text-gray-800 hover:text-blue-500 focus:outline-none"
         onClick={toggleMenu}
+        aria-label='Hamburger Menu'
       >
         <svg
           className="w-6 h-6"
