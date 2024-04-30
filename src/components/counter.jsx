@@ -3,7 +3,7 @@ import '../../public/styles/animations.css';
 import '../../public/styles/bg_transparent.css';
 
 const Counter = () => {
-  const [counters, setCounters] = useState([
+  const [counter, setCounter] = useState([
     { id: 'counter1', start: 0, end: 69, prefix: '', suffix: 'Professional Teachers' },
     { id: 'counter2', start: 0, end: 3918, prefix: '', suffix: 'Registered Students' },
     { id: 'counter3', start: 0, end: 15198, prefix: '', suffix: 'Established Alumni' },
@@ -39,16 +39,11 @@ const Counter = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (isVisible) {
-      startCounter();
-    }
-  }, [isVisible]);
-
   const startCounter = () => {
-    const animateCounter = (counter) => {
-      const duration = 3000;
-      const interval = 30; // Update interval in milliseconds
+    const duration = 3000;
+    const interval = 30; // Update interval in milliseconds
+
+    counter.forEach((counter) => {
       const increment = (counter.end - counter.start) / (duration / interval);
       let currentCount = counter.start;
 
@@ -60,24 +55,21 @@ const Counter = () => {
           clearInterval(timer);
         }
 
-        setCounters((prevCounters) =>
-          prevCounters.map((c) =>
+        setCounter((prevCounter) =>
+          prevCounter.map((c) =>
             c.id === counter.id ? { ...c, start: Math.ceil(currentCount) } : c
           )
         );
       }, interval);
-    };
-
-    counters.forEach((counter) => animateCounter(counter));
+    });
   };
 
   return (
-    <div className="relative" ref={counterRef}>
-      {/* <img className="w-full h-[600px]" src="/assets/aot3.png" alt="Academy of Technology" /> */}
-      <div class="bg-[url('/assets/aot3.png')] bg-cover h-[600px] bg-bottom"> </div>
+
+    <div className="relative flex flex-col items-center justify-center h-[600px] bg-cover bg-bottom bg-[url('/assets/aot3.png')]">
       <div className="absolute inset-0 bg-black opacity-40"></div>
-      <div className="absolute top-1/2 left-1/2 sm:top-1/2 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-12">
-        {counters.map((counter, key) => (
+      <div className="absolute top-1/2 left-1/2 sm:top-1/2 sm:left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-12">
+        {counter.map((counter, key) => (
           <div className="text-white flex items-center" key={counter.id}>
             <span className="text-6xl font-bold flex items-center">
               {counter.start}
@@ -96,3 +88,7 @@ const Counter = () => {
 };
 
 export default Counter;
+
+
+
+
