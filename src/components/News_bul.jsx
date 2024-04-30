@@ -101,13 +101,13 @@ const News_bul = () => {
           </Swiper>
         </div>
       </div>
-      <div className="mobile lg:hidden flex justify-center items-center h-full">
+      <div className="mobile lg:hidden flex gap-4  justify-center items-center h-full w-[100vw] m-auto ml-[-8%]">
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
           onSlideChange={() => console.log('slide change')}
           onSwiper={setSwiper}
-          className=' flex items-center justify-center'
+          className=' flex items-center justify-center  w-[100vw] '
         >
           {news.map((card, id) => (
             <SwiperSlide key={id}>
