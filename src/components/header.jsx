@@ -25,7 +25,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="mt-10 bg-white  z-10 sticky top-0">
+    <header className="mt-10 bg-white  z-10  top-0">
       <div className="bg-yellow-500 h-2 w-full"></div>
       <div className="container mx-auto flex justify-between items-center py-4">
         <a href="/" className="flex items-center">
