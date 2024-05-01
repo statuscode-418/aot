@@ -1,10 +1,10 @@
 ---
-import Navbar from '../components/Navbar/navbar.jsx'
-import Footer from '../components/footer.jsx'
-import Header from '../components/header.jsx'
+import Navbar from "../components/Navbar/navbar.jsx";
+import Footer from "../components/footer.jsx";
+import Header from "../components/header.jsx";
 ---
 
-		<html lang="en">
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,10 +13,9 @@ import Header from '../components/header.jsx'
 		<title>Astro</title>
 	</head>
 	<body class="bg-aot-bone">
-  <Header client:load />
-  <Navbar client:load/>
-  <slot />
-  <Footer client:load />
-  </body>
-  </html>
-
+		<Header client:load />
+		<Navbar client:load />
+		<slot />
+		<Footer client:load />
+	</body>
+</html>
