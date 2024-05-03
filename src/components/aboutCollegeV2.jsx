@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef,useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 
@@ -9,7 +9,7 @@ const aboutCollegeV2 = () => {
     rootMargin: '-100px',
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start('visible');
     }
