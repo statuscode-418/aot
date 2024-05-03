@@ -1,18 +1,42 @@
-import React, { useEffect, useRef, useState } from 'react';
-
-import '../../public/styles/animations.css';
-import '../../public/styles/bg_transparent.css';
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { gsap } from "gsap";
 
 const Counter = () => {
   const [counter, setCounter] = useState([
-    { id: 'counter1', start: 0, end: 69, prefix: '', suffix: 'Professional Teachers' },
-    { id: 'counter2', start: 0, end: 3918, prefix: '', suffix: 'Registered Students' },
-    { id: 'counter3', start: 0, end: 15198, prefix: '', suffix: 'Established Alumni' },
-    { id: 'counter4', start: 0, end: 150, prefix: '', suffix: 'Placement on 2024' }
+    {
+      id: "counter1",
+      start: 0,
+      end: 69,
+      prefix: "",
+      suffix: "Professional Teachers",
+    },
+    {
+      id: "counter2",
+      start: 0,
+      end: 3918,
+      prefix: "",
+      suffix: "Registered Students",
+    },
+    {
+      id: "counter3",
+      start: 0,
+      end: 15198,
+      prefix: "",
+      suffix: "Established Alumni",
+    },
+    {
+      id: "counter4",
+      start: 0,
+      end: 150,
+      prefix: "",
+      suffix: "Placement on 2024",
+    },
   ]);
 
   const [isVisible, setIsVisible] = useState(false);
   const counterRef = useRef(null);
+  const controls = useAnimation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,7 +50,7 @@ const Counter = () => {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     if (counterRef.current) {
@@ -41,28 +65,27 @@ const Counter = () => {
   }, []);
 
   const startCounter = () => {
-    const duration = 3000;
-    const interval = 30;
+    const duration = 3; // Duration in seconds
+    const interval = 0.03; // Interval in seconds
 
     counter.forEach((counterItem) => {
       const { id, start, end } = counterItem;
       const increment = (end - start) / (duration / interval);
       let currentCount = start;
 
-      const timer = setInterval(() => {
-        currentCount += increment;
-
-        if (currentCount >= end) {
-          currentCount = end;
-          clearInterval(timer);
-        }
-
-        setCounter((prevCounter) =>
-          prevCounter.map((c) =>
-            c.id === id ? { ...c, start: Math.ceil(currentCount) } : c
-          )
-        );
-      }, interval);
+      gsap.to(counterItem, {
+        start: end,
+        duration: duration,
+        ease: "power2.out",
+        onUpdate: () => {
+          setCounter((prevCounter) =>
+            prevCounter.map((c) =>
+              c.id === id ? { ...c, start: Math.ceil(currentCount) } : c,
+            ),
+          );
+          currentCount += increment;
+        },
+      });
     });
   };
 
@@ -74,15 +97,21 @@ const Counter = () => {
         ref={counterRef}
       >
         {counter.map((counter, key) => (
-          <div className="text-white flex items-center" key={counter.id} >
+          <div className="text-white flex items-center" key={counter.id}>
             <span className="text-6xl font-bold flex items-center">
               {counter.start}
-              {counter.id === 'counter4' && <span className="text-5xl">%</span>}
+              {counter.id === "counter4" && (
+                <span className="text-5xl">%</span>
+              )}
             </span>
             <div className="ml-2">
               <div className="text-3xl">{counter.prefix}</div>
-              {counter.id === 'counter4' && <div className="text-3xl">{counter.suffix}</div>}
-              {counter.id !== 'counter4' && <div className="text-3xl">{counter.suffix}</div>}
+              {counter.id === "counter4" && (
+                <div className="text-3xl">{counter.suffix}</div>
+              )}
+              {counter.id !== "counter4" && (
+                <div className="text-3xl">{counter.suffix}</div>
+              )}
             </div>
           </div>
         ))}
