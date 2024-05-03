@@ -3,8 +3,8 @@ import { DepartmentNews } from "../../constants/departmentNews";
 
 const DepartmentalNews = () => {
     return (
-        <div className="flex justify-between text-blue-800 font-bold " >
-            <div className="hidden md:block sm:block mr-auto ml-16 ">
+        <div className="flex justify-between text-blue-800 font-bold p-2 " >
+            <div className=" mr-auto ml-16 ">
                 <h1 className='text-5xl mb-5'>Departmental News</h1>
                 <div className='border border-black  rounded-3xl bg-white ' style={{ height: '65%', width: '95%' }} >
                     <img className='m-5' style={{ width: 'calc(100% - 40px)' }} src="/assets/asset1.png" alt="asset" />
