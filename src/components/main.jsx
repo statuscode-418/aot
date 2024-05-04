@@ -19,8 +19,8 @@ const main = () => {
 	useEffect(() => {
 		(async () => {
 			try {
-				const Lenis = (await import("@studio-freight/lenis")).default;
-				const lenis = new Lenis();
+				const LocomotiveScroll = (await import("locomotive-scroll")).default;
+				const locomotiveScroll = new LocomotiveScroll();
 
 				setTimeout(() => {
 					setIsLoading(false);

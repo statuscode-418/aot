@@ -16,6 +16,7 @@ const aboutCollegeV2 = () => {
   }, [controls, inView]);
 
   return (
+    
     <motion.div
       className="bg-[url(/assets/aot2.jpg)] h-[80vh] bg-cover p-10 my-2"
       animate={controls}
