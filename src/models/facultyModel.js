@@ -15,3 +15,9 @@ export class FacultyModel {
 		this.image_url = image_url;
 	}
 }
+
+
+
+
+
+
