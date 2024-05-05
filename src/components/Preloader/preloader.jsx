@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { opacity, slideUp } from "./anime";
@@ -59,7 +58,9 @@ export const Preloader = () => {
 						<span></span>
 						{words[index]}
 					</motion.p>
-					<svg style={{ fill: "yellow" }}> {/* Change the fill color to yellow */}
+					<svg style={{ fill: "yellow" }}>
+						{" "}
+						{/* Change the fill color to yellow */}
 						<motion.path
 							variants={curve}
 							initial="initial"
