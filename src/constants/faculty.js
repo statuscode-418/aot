@@ -1,4 +1,4 @@
-import { FacultyModel } from "../models/FacultyModel.js";
+import { FacultyModel } from "../models/facultyModel.js";
 
 export const faculty = [
 	new FacultyModel(
@@ -20,7 +20,7 @@ export const faculty = [
 		"Professor & Principal",
 		"Ph.D",
 		"20 yrs",
-		"#",
+		"CSE",
 	),
 	new FacultyModel("Prof. Partha Dey", "Professor", "Ph.D", "24 yrs", "#"),
 	new FacultyModel(
@@ -35,14 +35,14 @@ export const faculty = [
 		"Associate Professor & Registrar",
 		"Ph.D",
 		"17 yrs 8 mts",
-		"#",
+		"CSE",
 	),
 	new FacultyModel(
 		"Arindrajit Pal",
 		"Associate Professor",
 		"Ph.D",
 		"18 yrs 7 mts",
-		"#",
+		"CSE",
 	),
 	new FacultyModel(
 		"Basab Chatterjee",
@@ -56,7 +56,7 @@ export const faculty = [
 		"Associate Professor",
 		"Ph.D",
 		"16 yrs",
-		"#",
+		"ECE",
 	),
 	new FacultyModel(
 		"Sandip Saha Chowdhury",
@@ -70,7 +70,7 @@ export const faculty = [
 		"Associate Professor",
 		"Ph.D",
 		"17 yrs 2 mts",
-		"#",
+		"EE",
 	),
 	new FacultyModel("Srinjoy Bid", "Associate Professor", "Ph.D", "20 yrs", "#"),
 	new FacultyModel(
@@ -78,14 +78,14 @@ export const faculty = [
 		"Associate Professor",
 		"Ph.D",
 		"21 yrs 5 mts",
-		"#",
+		"ESC",
 	),
 	new FacultyModel(
 		"Biswaranjan Das",
 		"Associate Professor",
 		"Ph.D",
 		"18 yrs 8 mts",
-		"#",
+		"ESC",
 	),
 	new FacultyModel(
 		"Baishakhi Bhattacharya",
@@ -99,7 +99,7 @@ export const faculty = [
 		"Associate Professor",
 		"Ph.D",
 		"14 yrs 8 mts",
-		"#",
+		"ESC",
 	),
 	new FacultyModel(
 		"Poulomi Deb Roy Chowdhury",
@@ -128,14 +128,14 @@ export const faculty = [
 		"Associate Professor",
 		"Ph.D",
 		"16 yrs",
-		"#",
+		"CSE",
 	),
 	new FacultyModel(
 		"Paulomi Chattopadhyay",
 		"Associate Professor",
 		"Ph.D",
 		"15 yrs 6 mts",
-		"#",
+		"ESC",
 	),
 	new FacultyModel("Subir Panja", "Associate Professor", "Ph.D", "14 yrs", "#"),
 	new FacultyModel(
@@ -157,7 +157,7 @@ export const faculty = [
 		"Assistant Professor",
 		"Ph.D",
 		"2 yrs",
-		"#",
+		"CSE",
 	),
 	new FacultyModel(
 		"Kanishka Majumder",
@@ -179,14 +179,14 @@ export const faculty = [
 		"Assistant Professor",
 		"Ph.D",
 		"15 yrs 10 mts",
-		"#",
+		"ESC",
 	),
 	new FacultyModel(
 		"Ramnayan Mukherjee",
 		"Assistant Professor",
 		"Ph.D",
 		"8 yrs",
-		"#",
+		"ESC",
 	),
 	new FacultyModel(
 		"Somnath Mukherjee",
@@ -221,7 +221,7 @@ export const faculty = [
 		"Assistant Professor",
 		"Ph.D",
 		"2 yrs",
-		"#",
+		"ESC",
 	),
 	new FacultyModel(
 		"Shalini Misra",
@@ -249,7 +249,7 @@ export const faculty = [
 		"Assistant Professor",
 		"Ph.D",
 		"10 yrs 2 mts",
-		"#",
+		"ME",
 	),
 	new FacultyModel(
 		"Sanjib Kundu",
@@ -263,7 +263,7 @@ export const faculty = [
 		"Assistant Professor",
 		"Ph.D",
 		"10 yrs",
-		"#",
+		"CSE",
 	),
 	new FacultyModel(
 		"Smarajit Maity",
@@ -333,7 +333,7 @@ export const faculty = [
 		"Assistant Professor",
 		"M.E",
 		"7 yrs 8 mts",
-		"#",
+		"ME",
 	),
 	new FacultyModel(
 		"Nibedita Saha",
@@ -347,7 +347,7 @@ export const faculty = [
 		"Assistant Professor",
 		"M.Tech",
 		"15 yrs 1 mts",
-		"#",
+		"ECE",
 	),
 	new FacultyModel(
 		"Supantha Das",
@@ -368,7 +368,7 @@ export const faculty = [
 		"Assistant Professor",
 		"M.Tech",
 		"12 yrs 7 mts",
-		"#",
+		"ECE",
 	),
 	new FacultyModel(
 		"Rakhi Neogi",
@@ -424,7 +424,7 @@ export const faculty = [
 		"Assistant Professor",
 		"M.Tech",
 		"20 yrs",
-		"#",
+		"CSE",
 	),
 	new FacultyModel(
 		"Somen Kumar Hati",
@@ -531,7 +531,13 @@ export const faculty = [
 		"14 yrs 2 mts",
 		"#",
 	),
-	new FacultyModel("Swarna Das", "Assistant Professor", "M.E", "9yrs", "#"),
+	new FacultyModel(
+		"Swarna Das",
+		"Assistant Professor",
+		"M.E", 
+		"9yrs", 
+		"#"
+	),
 	new FacultyModel(
 		"Amit Kumar Nandi",
 		"Assistant Professor",
@@ -572,7 +578,7 @@ export const faculty = [
 		"Assistant Professor",
 		"M.Tech",
 		"2 yrs 2 mts",
-		"#",
+		"ESC",
 	),
 	new FacultyModel(
 		"Manisha",
@@ -621,14 +627,14 @@ export const faculty = [
 		"Assistant Professor",
 		"M.Tech",
 		"19 yrs 8 mts",
-		"#",
+		"EE",
 	),
 	new FacultyModel(
 		"Debasish Sur",
 		"Assistant Professor",
 		"M.Tech",
 		"10 yrs 7 mts",
-		"#",
+		"EE",
 	),
 	new FacultyModel(
 		"Debjani Bhattacharya",
@@ -705,7 +711,7 @@ export const faculty = [
 		"Assistant Professor",
 		"M.Sc",
 		"20 yrs 2 mts",
-		"#",
+		"ESC",
 	),
 	new FacultyModel(
 		"Soma Banerjee",
@@ -741,7 +747,7 @@ export const faculty = [
 		"Assistant Professor",
 		"MCA, M.Tech",
 		"15 yrs 8 mts",
-		"#",
+		"CSE",
 	),
 	new FacultyModel(
 		"Venu Gopal",
@@ -755,7 +761,7 @@ export const faculty = [
 		"Assistant Professor",
 		"M.Tech",
 		"2 yrs 2 mts",
-		"#",
+		"CSE",
 	),
 	new FacultyModel(
 		"Sarjita Soo",
@@ -846,7 +852,7 @@ export const faculty = [
 		"Assistant Professor",
 		"M.Tech",
 		"19 yrs",
-		"#",
+		"CSE",
 	),
 	new FacultyModel(
 		"Priya Raj Chandra",
