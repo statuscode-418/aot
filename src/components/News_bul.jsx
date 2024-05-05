@@ -49,14 +49,14 @@ const News_bul = () => {
 
 	useEffect(() => {
 		if (inView) {
-			// When component is scrolled into view, start animations
+			
 			controls.start({
 				opacity: 1,
 				y: 0,
 				transition: {
 					duration: 0.5,
-					delay: 0.2, // You can adjust the delay as needed
-				},
+					delay: 0.2,
+				}, 
 			});
 		}
 	}, [controls, inView]);
