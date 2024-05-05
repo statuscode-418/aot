@@ -1,10 +1,10 @@
 export class FacultyModel {
 	constructor(
 		name,
-		department = null,
 		designation,
-		experience,
 		qualification,
+		experience,
+		department = null,
 		image_url,
 	) {
 		this.name = name;

@@ -13,9 +13,9 @@ const MenuItem = ({ item }) => {
 			<div
 				onMouseEnter={handleHover}
 				onMouseLeave={handleHover}
-				className="cursor-pointer font-bold  uppercase hover:bg-[#0047ab] hover:border-2 hover:border-black hover:text-white focus:outline-none px-4 py-2 relative"
+				className="cursor-pointer font-bold  uppercase hover:bg-[#0047ab] hover:border-2 hover:border-black hover:text-white focus:outline-none px-4 py-1 relative"
 			>
-				<a href={item.link} className="block w-full h-full">
+				<a href={item.link} className="block w-full h-full text-base">
 					{item.label}
 				</a>
 				{item.submenu && isHovered && (
@@ -50,7 +50,7 @@ const MenuItem = ({ item }) => {
 						>
 							{item.subSubmenu.map((subSubItem, index) => (
 								<div key={index} className="py-1 border-b border-black">
-									<div className="cursor-pointer text-[#000080] font-bold uppercase hover:bg-[#0047ab] hover:text-white focus:outline-none px-4 py-2 relative">
+									<div className="cursor-pointer text-[#000080] font-bold uppercase text-base hover:bg-[#0047ab] hover:text-white focus:outline-none px-4 py-1 relative">
 										<a
 											href={subSubItem.link}
 											className="text-[#000080] hover:text-white transition duration-300 ease-in-out"

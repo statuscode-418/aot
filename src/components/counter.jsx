@@ -7,7 +7,7 @@ const Counter = () => {
 		{
 			id: "counter1",
 			start: 0,
-			end: 69,
+			end: 50,
 			prefix: "",
 			suffix: "Professional Teachers",
 		},
@@ -28,7 +28,7 @@ const Counter = () => {
 		{
 			id: "counter4",
 			start: 0,
-			end: 150,
+			end: 123,
 			prefix: "",
 			suffix: "Placement on 2024",
 		},
