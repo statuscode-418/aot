@@ -25,7 +25,7 @@ const DepartmentalNews = () => {
         </div>
     </div>
 
-    <div className="flex items-center ">
+    <div className="flex items-center">
         <div className="hidden sm:block relative right-[17.5rem] md:block h-full" style={{ borderLeft: '2px solid black', height: "65vh" }}></div>
     </div>
 
