@@ -1,11 +1,11 @@
 import React from 'react';
-import { faculty } from '../../constants/faculty.js'; // adjust the path as needed
+import { faculty } from '../../constants/faculty.js';
 
 const FacultyListComponent = () => {
     return (
         <div classname="p-10">
             <h1 className="text-6xl font-bold mb-12 text-center text-blue-900 mt-6">Faculty List</h1>
-            <table className="min-w-1/2">
+            <table className="w-11/12 mx-auto">
                 <thead className="justify-between">
                     <tr className="bg-blue-900">
                         <th className="px-16 py-2 border-r border-gray-400">
