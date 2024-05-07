@@ -29,24 +29,24 @@ const Header = () => {
 
 	return (
 		<header className="mt-10 bg-white  z-10  top-0">
-			<div className="bg-yellow-500 h-2 w-full"></div>
+			<div className="bg-blue-900 h-2 w-full"></div>
 			<div className="container mx-auto flex justify-between items-center py-4">
-				<a href="/" className="flex items-center">
+				<a href="/" className="flex items-center ml-5">
 					<img
 						src="https://res.cloudinary.com/dtwrlsxun/image/upload/v1715102918/aot_assets/ul2qfwpxmakc92vbhtl4.jpg"
 						alt="Academy of Technology"
-						className="h-15 mr-2"
+						className="h-18"
 					/>
 				</a>
 				<div className="flex-grow flex flex-col items-center">
-					<h1 className="text-3xl font-bold text-center">
+					<h1 className="text-3xl font-bold text-center text-[#232c69]">
 						ACADEMY OF TECHNOLOGY
 					</h1>
-					<p className="text-sm mt-1">...translate your vision into reality</p>
+					<p className="text-lg font-bold mt-1 text-[#232c69]">...translate your vision into reality</p>
 				</div>
-				<div className="relative">
+				<div className="relative mr-6">
 					<FaBullhorn
-						className="text-[#000080]"
+						className="text-[#232c69]"
 						onClick={toggleAnnouncement}
 						style={{ fontSize: "3rem" }}
 					/>
