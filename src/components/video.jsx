@@ -8,7 +8,7 @@ const video = () => {
 				<div>your</div>
 				<div>dreams</div>
 				<video
-					src={videoSrc}
+					src={'https://res.cloudinary.com/dtwrlsxun/video/upload/v1715102927/aot_assets/zsnmhagj3dyqddbeocnl.mp4'}
 					poster="../assets/aot2.jpg"
 					autoPlay
 					loop

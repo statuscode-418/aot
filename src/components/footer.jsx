@@ -9,7 +9,7 @@ const Footer = () => {
 		<footer className="bg-gray-800 text-white py-8 px-4 md:min-h-auto">
 			<div className="flex flex-col md:flex-row ml-8">
 				<div className="flex-1 mb-8 md:mb-0">
-					<img src="https://res.cloudinary.com/dtwrlsxun/image/upload/v1715096052/qwdlkowiedbklxnaqmol.jpg" alt="AOT" />
+					<img src="https://res.cloudinary.com/dtwrlsxun/image/upload/v1715102918/aot_assets/ul2qfwpxmakc92vbhtl4.jpg" alt="AOT" />
 					<h1 className="text-3xl mb-2 mt-4">ACADEMY OF TECHNOLOGY</h1>
 					<p className="text-lg">
 						G.T.Road (Adisaptagram), <br />

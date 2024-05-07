@@ -33,7 +33,7 @@ const Header = () => {
 			<div className="container mx-auto flex justify-between items-center py-4">
 				<a href="/" className="flex items-center">
 					<img
-						src="https://res.cloudinary.com/dtwrlsxun/image/upload/v1715096052/qwdlkowiedbklxnaqmol.jpg"
+						src="https://res.cloudinary.com/dtwrlsxun/image/upload/v1715102918/aot_assets/ul2qfwpxmakc92vbhtl4.jpg"
 						alt="Academy of Technology"
 						className="h-15 mr-2"
 					/>
