@@ -1,11 +1,11 @@
 export const companies = [
-	{ img_source: "assets/tcs.png", href: "https://www.tcs.com/" },
-	{ img_source: "assets/google.png", href: "https://www.google.co.in/" },
+	{ img_source: "assets/tcs.png", href: "https://www.tcs.com/", },
+	{ img_source: "assets/google.png", href: "https://www.google.co.in/", },
 	{
 		img_source: "assets/cognizant.png",
 		href: "https://www.cognizant.com/in/en",
 	},
-	{ img_source: "assets/amazon.png", href: "https://www.amazon.in/" },
+	{ img_source: "https://res.cloudinary.com/dtwrlsxun/image/upload/v1715095739/cxzcymrn2czkd95ffn2k.png", href: "https://www.amazon.in/" },
 	{ img_source: "assets/wipro.png", href: "https://www.wipro.com/en-IN/" },
 	{ img_source: "assets/capgemni.png", href: "https://www.capgemini.com/" },
 	{ img_source: "assets/hcl.png", href: "https://www.hcltech.com/" },
