@@ -24,7 +24,7 @@ const MenuItem = ({ item }) => {
 						animate={{ opacity: 1, x: 0, y: 0 }}
 						exit={{ opacity: 0, x: 10, y: -10 }}
 						transition={{ duration: 0.2 }}
-						className="absolute left-full border-2 border-black top-0 mt-1 w-[200px] bg-[#232c69]  text-[#ffcc00] shadow-md rounded-md p-2 z-10 text-center"
+						className="absolute left-0 border-2 border-black top-full mt-1 w-[200px] bg-[#232c69]  text-[#ffcc00] shadow-md rounded-md p-2 z-10 text-center"
 					>
 						{item.submenu.map((subItem, index) => (
 							<div key={index}>
