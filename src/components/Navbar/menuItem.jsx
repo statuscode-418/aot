@@ -29,7 +29,7 @@ const MenuItem = ({ item }) => {
 						{item.submenu.map((subItem, index) => (
 							<div key={index}>
 								<MenuItem item={subItem} />
-								<hr style={{ borderColor: "yellow" }} />{" "}
+								<hr className="bg-[#232C69]" />{" "}
 								{/* Change the border color to black */}
 							</div>
 						))}
