@@ -38,7 +38,7 @@ const eventScedule = () => {
           once: false,     
           mirror: false 
         });
-      }, []);
+      }, []); 
   return (
     <div className='flex flex-col items-center justify-center'>
     <h1  className='text-[#0F2167] font-bold text-[50px] flex items-center justify-center'  >Event Scedule</h1>
