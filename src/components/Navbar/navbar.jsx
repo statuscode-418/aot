@@ -34,8 +34,8 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="bg-[#FFD700] sticky top-0 z-10 ">
-			<div className="container mx-auto px-4 py-2 text-[#000080] text-xl">
+		<nav className="bg-[#232C69] sticky top-0 z-10 ">
+			<div className="container mx-auto px-4 py-2 text-[#FFCC00] text-xl">
 				<ul className="flex justify-between items-center">
 					<li>
 						<div className="flex justify-center space-x-10 flex-wrap">
@@ -73,7 +73,7 @@ const Navbar = () => {
 							</div>
 						) : (
 							<button
-								className="bg-[#ffd700] text-[#000080] px-4 py-2 rounded-md hover:bg-[#232c695b] focus:outline-none focus:ring-1 focus:ring-blue-500"
+								className="bg-[#232c69] text-[#ffcc00] px-4 py-2 rounded-md hover:bg-[#232c695b] focus:outline-none focus:ring-1 focus:ring-blue-500"
 								onClick={toggleSearch}
 								aria-label="Search"
 							>
