@@ -28,14 +28,14 @@ const Header = () => {
 	}, []);
 
 	return (
-		<header className=" bg-white  z-10  top-0">
+		<header className=" bg-[#ffcc00]  z-10  top-0">
 			<div className="bg-blue-900 h-2 w-full"></div>
 			<div className="container mx-auto flex justify-between items-center py-4">
 				<a href="/" className="flex items-center ml-5">
 					<img
 						src="https://res.cloudinary.com/dtwrlsxun/image/upload/v1715102918/aot_assets/ul2qfwpxmakc92vbhtl4.jpg"
 						alt="Academy of Technology"
-						className="h-18"
+						className="h-18 mix-blend-multiply"
 					/>
 				</a>
 				<div className="flex-grow flex flex-col items-center">
