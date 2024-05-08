@@ -78,7 +78,7 @@ const News_bul = () => {
 						{news.map((card, id) => (
 							<SwiperSlide key={id}>
 								<motion.div
-									className="p-4 border-[3px] border-black rounded-[20px] w-[90vw] lg:w-[25vw] shadow-lg transform perspective-1000 m-[10px]"
+									className="p-4 border-[2px] border-black rounded-[20px] w-[90vw] lg:w-[25vw] shadow-lg transform perspective-1000 m-[10px]"
 									whileHover={{
 										scale: 1.01,
 										boxShadow:
@@ -102,7 +102,7 @@ const News_bul = () => {
 											{card.Author}
 										</div>
 									</div>
-									<div className="names border-[3px] border-black p-4 m-3 rounded-md text-[20px] font-bold pt-4 flex items-center justify-center flex-col">
+									<div className="names border-[1.5px] border-black p-4 m-3 rounded-md text-[20px] font-bold pt-4 flex items-center justify-center flex-col">
 										<h1> {card.details} </h1>
 										<div className="m-3">
 											{hoverIndex === id ? (

@@ -7,7 +7,7 @@ const DepartmentalNews = () => {
     <div className="mr-auto ml-16 ">
         <h1 className='text-5xl mb-5'>Departmental News</h1>
         <div className='border border-black rounded-3xl bg-white' style={{ height: '75%', width: '95%' }}>
-            <img className='m-5' style={{ width: 'calc(100% - 40px)' }} src="/assets/asset1.png" alt="asset" />
+            <img className='m-5' style={{ width: 'calc(100% - 40px)' }} src="https://res.cloudinary.com/dtwrlsxun/image/upload/v1715102919/aot_assets/dvnkz4bnjqcfnzr6hxze.png" alt="asset" />
             <div>
                 <p className='ml-5'>24th April 2024</p>
                 <p className='ml-5 text-4xl'>Lorem ipsum dolor sit, !</p>

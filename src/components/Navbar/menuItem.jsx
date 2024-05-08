@@ -13,7 +13,7 @@ const MenuItem = ({ item }) => {
 			<div
 				onMouseEnter={handleHover}
 				onMouseLeave={handleHover}
-				className="cursor-pointer font-bold  uppercase hover:bg-[#0047ab] hover:border-2 hover:border-black hover:text-white focus:outline-none px-4 py-1 relative"
+				className="cursor-pointer font-bold  uppercase hover:bg-[#ffcc00] hover:border-2 hover:border-[#ffcc00] hover:text-[#232c69] focus:outline-none px-4 py-1 relative"
 			>
 				<a href={item.link} className="block w-full h-full text-base">
 					{item.label}
@@ -24,12 +24,12 @@ const MenuItem = ({ item }) => {
 						animate={{ opacity: 1, x: 0, y: 0 }}
 						exit={{ opacity: 0, x: 10, y: -10 }}
 						transition={{ duration: 0.2 }}
-						className="absolute left-full border-2 border-black top-0 mt-1 w-[200px] bg-[#ffd700]  text-[#000080] shadow-md rounded-md p-2 z-10"
+						className="absolute left-0 border-2 border-black top-full mt-1 w-[200px] bg-[#232c69]  text-[#ffcc00] shadow-md rounded-md p-2 z-10 text-center"
 					>
 						{item.submenu.map((subItem, index) => (
 							<div key={index}>
 								<MenuItem item={subItem} />
-								<hr style={{ borderColor: "black" }} />{" "}
+								<hr style={{ borderColor: "yellow" }} />{" "}
 								{/* Change the border color to black */}
 							</div>
 						))}
@@ -45,15 +45,15 @@ const MenuItem = ({ item }) => {
 							animate={{ opacity: 1, x: 0, y: 0 }}
 							exit={{ opacity: 0, x: 10, y: -10 }}
 							transition={{ duration: 0.2 }}
-							className="absolute left-full top-0 mt-1 w-[200px] bg-[#ffd700] shadow-md rounded-md p-2 z-10 border border-black"
+							className="absolute left-full top-0 mt-1 w-[180px] bg-[#232c69] shadow-md rounded-md p-2 z-10 border-[#ffcc00]"
 							style={{ border: "2px solid #000000" }}
 						>
 							{item.subSubmenu.map((subSubItem, index) => (
-								<div key={index} className="py-1 border-b border-black">
-									<div className="cursor-pointer text-[#000080] font-bold uppercase text-base hover:bg-[#0047ab] hover:text-white focus:outline-none px-4 py-1 relative">
+								<div key={index} className="py-1 border-b border-[#ffcc00]">
+									<div className="cursor-pointer text-[#ffcc00] font-bold uppercase text-base hover:bg-[#ffcc00] hover:text-[#232c69] focus:outline-none px-4 py-1 relative text-center">
 										<a
 											href={subSubItem.link}
-											className="text-[#000080] hover:text-white transition duration-300 ease-in-out"
+											//className="text-[#ffcc00] hover:text-[#232c69]"
 										>
 											{subSubItem.label}
 										</a>
