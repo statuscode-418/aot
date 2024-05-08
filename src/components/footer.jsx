@@ -6,8 +6,8 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
 	return (
-		<footer className="bg-gray-800 text-white py-8 px-4 md:min-h-auto">
-			<div className="flex flex-col md:flex-row ml-8">
+		<footer className="bg-gray-800 text-white py-8  md:min-h-auto">
+			<div className="flex flex-col md:flex-row ml-12">
 				<div className="flex-1 mb-8 md:mb-0">
 					<img src="https://res.cloudinary.com/dtwrlsxun/image/upload/v1715102918/aot_assets/ul2qfwpxmakc92vbhtl4.jpg" alt="AOT" />
 					<h1 className="text-3xl mb-2 mt-4">ACADEMY OF TECHNOLOGY</h1>
@@ -119,7 +119,7 @@ const Footer = () => {
 				{/* Map and socials left div */}
 				<div className="flex-1">
 					<div className="md:absolute right-0">
-						<div className="flex flex-col md:col-span-1 mr-8">
+						<div className="flex flex-col md:col-span-1 mr-12">
 							<nav className="flex space-x-4 justify-center md:justify-end mb-8 md:mb-0">
 								<motion.a
 									href="https://www.facebook.com/www.aot.edu.in"
