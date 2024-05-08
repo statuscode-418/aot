@@ -5,7 +5,7 @@ const FacultyListComponent = () => {
     return (
         <div classname="p-10">
             <h1 className="text-6xl font-bold mb-12 text-center text-blue-900 mt-6">Faculty List</h1>
-            <table className="w-11/12 mx-auto">
+            <table className="w-11/12 mx-auto mb-[20px]">
                 <thead className="justify-between">
                     <tr className="bg-blue-900">
                         <th className="lg:px-16 py-2 border-r border-gray-400">
