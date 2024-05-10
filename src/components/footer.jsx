@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
 	return (
-		<footer className="bg-[#232C69] text-white py-8  md:min-h-auto">
+		<footer className="bg-aot-indigo text-white py-8  md:min-h-auto">
 			<div className="flex flex-col md:flex-row ml-12">
 				<div className="flex-1 mb-8 md:mb-0">
 					<img src="https://res.cloudinary.com/dtwrlsxun/image/upload/v1715102918/aot_assets/ul2qfwpxmakc92vbhtl4.jpg" alt="AOT" />

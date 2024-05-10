@@ -21,7 +21,7 @@ export const EventComponent = () => {
 
 	return (
 		<motion.div
-			className="w-full h-[50vh] bg-[url('/assets/aot4.jpg')] bg-cover py-4 my-2"
+			className="w-full h-[50vh] bg-[url('/assets/aot_bg.png')] bg-cover py-4 my-2"
 			ref={ref}
 			animate={controls}
 			initial="hidden"
@@ -32,7 +32,7 @@ export const EventComponent = () => {
 			transition={{ duration: 0.8, ease: "easeInOut" }}
 		>
 			<div className="w-full flex justify-center items-center h-[10%] lg:h-[20%]">
-				<h1 className="text-white font-bold text-2xl md:text-3xl lg:text-4xl">
+				<h1 className="text-aot-indigo font-bold text-2xl md:text-3xl lg:text-5xl">
 					Events
 				</h1>
 			</div>
