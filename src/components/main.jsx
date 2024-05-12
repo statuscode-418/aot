@@ -12,6 +12,7 @@ import News_bul from "./News_bul";
 import Video from "./video";
 import { Preloader } from "./Preloader/preloader.jsx";
 import { AnimatePresence } from "framer-motion";
+import Chatbot from './chatbot/bot.jsx'
 
 const main = () => {
 	const [isLoading, setIsLoading] = useState(true);
@@ -48,6 +49,7 @@ const main = () => {
 			<News_bul />
 			<Counter />
 			<Companies />
+      <Chatbot />
 			<Footer />
 			<BackToTop />
 		</>
