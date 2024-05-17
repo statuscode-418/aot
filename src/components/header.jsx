@@ -68,22 +68,22 @@ const Header = () => {
 								<ul>
 									<li className="text-center p-2 text-[#232C69]">
 										<span className="custom-underline">
-											DKM is a good boy but KB is not
+											Session on Flutter by Kaushik Chowdhury
 										</span>
 									</li>
 									<li className="text-center p-2 text-[#232C69]">
 										<span className="custom-underline">
-											DKM is a good boy but KB is not
+											Session on Flutter by Kaushik Chowdhury
 										</span>
 									</li>
 									<li className="text-center p-2 text-[#232C69]">
 										<span className="custom-underline">
-											DKM is a good boy but KB is not
+											Session on Flutter by Kaushik Chowdhury
 										</span>
 									</li>
 									<li className="text-center p-2 text-[#232C69]">
 										<span className="custom-underline">
-											DKM is a good boy but KB is not
+											Session on Flutter by Kaushik Chowdhury
 										</span>
 									</li>
 								</ul>
